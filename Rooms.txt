@@ -1,0 +1,11 @@
+Library
+Where stuff gets read
+Kitchen
+Where stuff gets cooked
+Dining Room
+Where
+Secret Room
+It's a secret
+Etc.
+Etc.
+Etc.
