@@ -1,7 +1,10 @@
 package com.players.npc;
 
+import java.util.ArrayList;
+
 public class Friend1 implements Friend{
     private String name = null;
+
 
     public Friend1(){
 
@@ -28,6 +31,7 @@ public class Friend1 implements Friend{
     public void doAction() {
         System.out.println(getName() + " is doing something....");
     }
+
 
     public String getName() {
         return name;
