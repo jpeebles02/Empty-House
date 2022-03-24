@@ -1,5 +1,7 @@
 package com.players.npc;
 
+import java.util.ArrayList;
+
 public class Animal1 implements Animals{
     private String name = null;
 
@@ -30,6 +32,7 @@ public class Animal1 implements Animals{
     public void doAction() {
         System.out.println(getName() + " is doing something....");
     }
+
 
     public String getName() {
         return name;
