@@ -3,6 +3,7 @@ package com.house;
 
 public class Rooms {
     //FIELDS
+
     private String name;
     private String description;
     private int n, s, w, e;
@@ -16,6 +17,7 @@ public class Rooms {
         s = aS;
         w = aW;
         e = aE;
+
     }
 
     //GETTERS & SETTERS
@@ -63,5 +65,6 @@ public class Rooms {
     public void setDescription(String aDescription) {
         this.description = aDescription;
     }
+
 
 }

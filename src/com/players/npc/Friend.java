@@ -10,4 +10,5 @@ public interface Friend extends Player {
      void talk();
      void think();
      void doAction();
+
 }

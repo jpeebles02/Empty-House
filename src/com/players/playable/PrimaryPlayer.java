@@ -2,8 +2,13 @@ package com.players.playable;
 
 import com.players.Player;
 
+import java.util.ArrayList;
+
+
 public class PrimaryPlayer implements Player {
-    String name = "Bill";
+    private String name = "Bill";
+    private Commands[] commandsAvailable = Commands.values();
+
 
     public PrimaryPlayer(String name) {
         setName(name);
@@ -27,6 +32,18 @@ public class PrimaryPlayer implements Player {
     @Override
     public void doAction(){
         System.out.println(getName() + " is doing something....");
+    }
+
+    public void listCommands(){
+        if(commandsAvailable == null){
+            System.out.println(getName() + " has no commands available");
+        }else{
+            ArrayList<Commands> cList = new ArrayList<>();
+            for(Commands c : Commands.values()){
+                cList.add(c);
+            }
+            System.out.println("Your list of commands are: " + cList);
+        }
     }
 
     public String getName() {

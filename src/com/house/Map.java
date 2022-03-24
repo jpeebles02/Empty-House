@@ -3,7 +3,7 @@ package com.house;
 public class Map {
     String [] location = {"entrance", "kitchen", "dining", "library", "secretRm1", "stairs",
             "main bedroom", "bathroom", "second bedroom", "basement", "secretRm2", "passage"};
-    while(input == location){
+    /*while(input == location){
         if (location == "entrance") {
         System.out.println("--------------------------------");
         System.out.println("|                              |");
@@ -128,4 +128,6 @@ public class Map {
         System.out.println("|                     |   *    |");
         System.out.println("|_____________________|________|");
     }
+    */
+
 }
