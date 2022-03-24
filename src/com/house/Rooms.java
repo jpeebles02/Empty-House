@@ -3,40 +3,65 @@ package com.house;
 
 public class Rooms {
     //FIELDS
-    private String roomName;
-    private String roomDescription;
-    private Items item;
+    private String name;
+    private String description;
+    private int n, s, w, e;
+
 
     //CONSTRUCTOR
-    public Rooms(String roomName, String roomDescription, Items item) {
-        this.roomName = roomName;
-        this.roomDescription = roomDescription;
-        this.item = item;
+    public Rooms(String aName, String aDescription, int aN, int aS, int aW, int aE) {
+        name = aName;
+        description = aDescription;
+        n = aN;
+        s = aS;
+        w = aW;
+        e = aE;
     }
 
     //GETTERS & SETTERS
 
-    public String getRoomName() {
-        return roomName;
+    public int getN(){
+        return n;
     }
 
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
+    public void setN(int aN) {
+        n = aN;
     }
 
-    public String getRoomDescription() {
-        return roomDescription;
+    public int getS(){
+        return s;
     }
 
-    public void setRoomDescription(String roomDescription) {
-        this.roomDescription = roomDescription;
+    public void setS(int aS) {
+        s = aS;
     }
 
-    public Items getItem() {
-        return item;
+    public int getW(){
+        return w;
     }
 
-    public void setItem(Items item) {
-        this.item = item;
+    public void setW(int aW) {
+        w = aW;
     }
+
+    public int getE(){
+        return e;
+    }
+
+    public void setE(int aE) {
+        e = aE;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return "This is " + description;
+    }
+
+    public void setDescription(String aDescription) {
+        this.description = aDescription;
+    }
+
 }

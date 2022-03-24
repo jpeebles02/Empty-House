@@ -3,9 +3,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLOutput;
 import java.util.*;
+import com.house.Rooms;
+//import com.house.Map;
 
 
 public class Main {
+
+    private static ArrayList <Rooms>map;
 
     public static void parseCommand(List<String> wordlist) {
         String verb;
@@ -61,6 +65,12 @@ public class Main {
         BufferedReader in;
         String input;
         String output;
+        map = new ArrayList<Rooms>();
+
+        map.add(new Rooms("Entrance", "The place you entered", -1, 2, -2, 1));
+        map.add(new Rooms("Kitchen", "Where you cook food", 1, 2, 0, -1));
+        map.add(new Rooms("Library", "Books are stored here", -1, 1, 0, 1));
+        map.add(new Rooms("Dining Room", "Where you eat the food", 0, -1, 0, 0));
 
         in = new BufferedReader(new InputStreamReader(System.in));
         do {
