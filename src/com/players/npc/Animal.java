@@ -2,33 +2,37 @@ package com.players.npc;
 
 import com.players.Character;
 
-public class Friend implements Character {
+public class Animal implements Character {
+    private String type;
     private String name = null;
 
-    public Friend(){
+    public Animal(){
 
     }
 
-    public Friend(String name) {
+    public Animal(String name) {
         setName(name);
     }
 
     @Override
     public void move(){
-        System.out.println(getName() + " is moving");
+    System.out.println("The " + getName() + " is moving");
     };
 
     public void talk(){
-        System.out.println(getName() + " is talking");
+     System.out.println("The " + getName() + " is talking");
     };
 
     public void think(){
-        System.out.println(getName() + " is thinking");
+     System.out.println("The " + getName() + " is thinking");
     };
 
     public void doAction(){
-        System.out.println(getName() + " is doing something....");
+     System.out.println("The " + getName() + " is doing something....");
     };
+
+
+
 
     public String getName() {
         return name;
@@ -38,8 +42,9 @@ public class Friend implements Character {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
-        return super.getClass().getSimpleName() + ": " + getName();
+        return super.getClass().getSimpleName() + ":" + getName();
     }
 }

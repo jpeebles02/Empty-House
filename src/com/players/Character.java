@@ -1,8 +1,7 @@
 package com.players;
 
-public interface Player {
+public interface Character {
     String name = null;
-
 
     void move();
     void talk();
