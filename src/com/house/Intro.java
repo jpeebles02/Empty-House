@@ -3,10 +3,10 @@ package com.house;
 import java.util.Scanner;
 
 public class Intro {
-    String intro = "Welcome to our game, Empty House! While playing you will be able to input your responses " +
-            "in order to move around the house and interact with the Non-playable Characters, animals, and objects. " +
-            " If you need help during the game you can type in help to bring up a menu of options or type location " +
-            "to get a map of where you are currently in the house.";
+    String intro = "It’s Halloween night, your friend invites you to an abandoned house to explore. "+
+            "After some convincing you decide to go in, as you enter the door slams shut behind you. " +
+            "You and your friend realize it is now locked and decide to split up to try and find another way out. " +
+            "He decides to go upstairs to look around, where would you like to go on the ground floor?";
 
 
 

@@ -1,0 +1,209 @@
+{
+  "House": {
+    "Entrance": [
+      {
+        "room_name": "Entrance",
+        "location": "entrance"
+      },
+      {
+        "directions": {
+          "north": "Stairs",
+          "east": "Library",
+          "south": "You can't go south",
+          "west": "Kitchen"
+        }
+      },
+      {
+        "description": "After your friend disappears looking for a way out you have to decide what area of the house you want to look first. \n You see stairs leading up to your north. \n A kitchen to your west \n and a Library to your east."
+      }
+    ],
+    "Kitchen": [
+      {
+        "room": "Kitchen",
+        "location": "kitchen"
+      },
+      {
+        "directions": {
+          "north": "Dining Room",
+          "east": "Entrance",
+          "south": "You can't go south",
+          "west": "You can't go West"
+        }
+      },
+      {
+        "description": "You enter the dirty kitchen and are approached by a cat with what appears to be a key around its collar, \nyou reach for it thinking it could be a key to a way out.  The cat runs out of arms distance.\n  You look around the kitchen for anything to lure the cat back out, you see a knife, fish, and pan."
+      }
+    ],
+    "Dining Room": [
+      {
+        "room": "Dining Room",
+        "location": "dining"
+      },
+      {
+        "directions": {
+          "north": "you can't go north",
+          "east": "Library",
+          "south": "Kitchen",
+          "west": "you can't go west"
+        }
+      },
+      {
+        "description": "You enter the dining room and right away you notice a butler standing in the corner with a tray."
+      }
+    ],
+    "Library": [
+      {
+        "room": "Library",
+        "location": "library"
+      },
+      {
+        "directions": {
+          "north": "you can't go north",
+          "east": "you can't go east",
+          "south": "hidden door",
+          "west": "Dining"
+        }
+      },
+      {
+        "description": "You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs besides one section that looks clean and has a book missing."
+      }
+    ],
+      "Main Bedroom": [
+        {
+          "room": "Main bedroom",
+          "location": "main bedroom"
+        },
+        {
+          "directions": {
+            "north": "you can't go north",
+            "east": "second bedroom",
+            "south": "bathroom",
+            "west": "you can't go west"
+          }
+        },
+        {
+          "description": "You approach the main bedroom but it is locked and requires a key. \n Have you collected the key?"
+        }
+      ],
+      "Second Bedroom": [
+        {
+          "room": "Second Bedroom",
+          "location": "second bedroom"
+        },
+        {
+          "directions": {
+            "north": "you can't go north",
+            "east": "you can't go east",
+            "south": "stairs",
+            "west": "main bedroom"
+          }
+        },
+        {
+          "description": "you enter the second bedroom and see a maid standing in the room looking out the window"
+        }
+      ],
+      "Bathroom": [
+        {
+          "room": "Bathroom",
+          "location": "bathroom"
+        },
+        {
+          "directions": {
+            "north": "stairs",
+            "east": "second bedroom",
+            "south": "you can't go south",
+            "west": "main bedroom"
+          }
+        },
+        {
+          "description": "In the bathroom you see a bunch of random items on the sink, a skeleton key catches your eye poking out slightly under a box"
+        }
+      ],
+      "Stairs": [
+        {
+          "room": "Stairs",
+          "location": "stairs"
+        },
+        {
+          "directions": {
+            "north": "you can't go north",
+            "east": "second bedroom",
+            "south": "entrance",
+            "west": "main bedroom"
+          }
+        },
+        {
+          "description": "as you stand at the top of the stairs you see three directions you could check. \n to the east is a second bedroom- \n to the west is a main bedroom \n or south and go back to the entrance"
+        }
+      ],
+      "Secret Room1": [
+        {
+          "room": "secretRm1",
+          "location": "secretRm1"
+        },
+        {
+          "directions": {
+            "north": "library",
+            "east": "you can't go east",
+            "south": "passage",
+            "west": "you can't go west"
+          }
+        },
+        {
+          "description": "Once you enter the room you notice a passage going down through the floor. \n you can go south and see where the passage leads \n or go north back into the library"
+        }
+      ],
+      "Passage": [
+        {
+          "room": "Passage",
+          "location": "passage"
+        },
+        {
+          "directions": {
+            "north": "library",
+            "east": "you can't go east",
+            "south": "basement",
+            "west": "you can't go west"
+          }
+        },
+        {
+          "description": "You enter the dark passage that has a ladder going down into a dimly lit room"
+        }
+      ],
+      "Basement": [
+        {
+          "room": "Basement",
+          "location": "basement"
+        },
+        {
+          "directions": {
+            "north": "passage",
+            "east": "secret room",
+            "south": "you can't go south",
+            "west": "you can't go west"
+          }
+        },
+        {
+          "description": "as you emerge out of the passage you enter a dimly lit room, you look around as your eyes adjust to the light.  You notice dusty items scattered throughout the room besides a tall metal door on the other side.  As you approach the door you see it is locked with a rusty padlock.  Do you have the key in your bag?"
+        }
+      ],
+      "Secret room2": [
+        {
+          "room": "Secret Room",
+          "location": "secretRm2"
+        },
+        {
+          "directions": {
+            "north": "you can't go north",
+            "east": "you can't go east",
+            "south": "you can't go south",
+            "west": "basement"
+          }
+        },
+        {
+          "description": "This room is locked, once unlocked you open the door to bright lights being turned on \n and you hear people yelling “SURPRISE”, as your vision comes back you see your friend \n that you came there with and about 20 other friends standing in the room.  \n Now you can enjoy your surprise party, YOU WIN!"
+        }
+      ]
+
+  }
+}

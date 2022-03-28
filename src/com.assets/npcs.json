@@ -1,0 +1,26 @@
+{
+  "NPCs": {
+    "butler": [
+      {
+        "location": "dining room"
+      },
+      {
+        "name": "Jarvis"
+      },
+      {
+        "speak": "the only way out of this house will be achieved when you find your friend. \n the other items you seek are scattered around the house",
+      }
+    ],
+    "maid": [
+      {
+        "location": "second bedroom"
+      },
+      {
+        "name": "Annabelle"
+      },
+      {
+        "speak": "you won't find a way out up here, keep looking or be trapped here forever like me"
+      }
+    ]
+  }
+}
