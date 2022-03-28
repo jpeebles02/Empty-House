@@ -114,16 +114,16 @@ public class Map {
     }
         else if(location == "basement"){
         System.out.println("--------------------------------");
-        System.out.println("||ST|                 |        |");
-        System.out.println("||--|                !!        |");
+        System.out.println("|( )                  |        |");
+        System.out.println("|                    !!        |");
         System.out.println("|        *            |   RM   |");
         System.out.println("|                     |        |");
         System.out.println("|_____________________|________|");
     }
         else{
         System.out.println("--------------------------------");
-        System.out.println("||ST|                 |        |");
-        System.out.println("||--|                !!        |");
+        System.out.println("|( )                  |        |");
+        System.out.println("|                    !!        |");
         System.out.println("|                     |   RM   |");
         System.out.println("|                     |   *    |");
         System.out.println("|_____________________|________|");
