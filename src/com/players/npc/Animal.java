@@ -1,8 +1,6 @@
 package com.players.npc;
 
-import com.players.Character;
-
-public class Animal implements Character {
+public class Animal  {
     private String type;
     private String name = null;
 
@@ -14,7 +12,7 @@ public class Animal implements Character {
         setName(name);
     }
 
-    @Override
+
     public void move(){
     System.out.println("The " + getName() + " is moving");
     };
