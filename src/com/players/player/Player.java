@@ -1,50 +1,32 @@
 package com.players.player;
 
-import com.players.Character;
-
 import java.util.ArrayList;
 
-
-public class Player implements Character {
+//Will make the player a Singleton during the next push
+public class Player  {
     private String name;
-    private Commands[] commandsAvailable = Commands.values();
+//    private Commands[] commandsAvailable = Commands.values();
+    private ArrayList<String> commands;
 
     public Player (){};
-    public Player(String name) {
+
+    public Player(String name, ArrayList<String> commands) {
         setName(name);
+        setCommands(commands);
     }
 
-    @Override
-    public void move() {
-        System.out.println(getName() + " moving");
-    }
 
-    @Override
-    public void talk() {
-        System.out.println(getName() + " talking");
-    }
-
-    @Override
-    public void think(){
-        System.out.println(getName() + " thinking");
-    }
-
-    @Override
-    public void doAction(){
-        System.out.println(getName() + " action");
-    }
-
-    public void listCommands(){
-        if(commandsAvailable == null){
-            System.out.println(getName() + " has no commands available");
-        }else{
-            ArrayList<Commands> cList = new ArrayList<>();
-            for(Commands c : Commands.values()){
-                cList.add(c);
-            }
-            System.out.println("Your list of commands are: " + cList);
-        }
-    }
+    //    public void listCommands(){
+//        if(commandsAvailable == null){
+//            System.out.println(getName() + " has no commands available");
+//        }else{
+//            ArrayList<Commands> cList = new ArrayList<>();
+//            for(Commands c : Commands.values()){
+//                cList.add(c);
+//            }
+//            System.out.println("Your list of commands are: " + cList);
+//        }
+//    }
 
     public String getName() {
         return name;
@@ -54,16 +36,15 @@ public class Player implements Character {
         this.name = name;
     }
 
-    public Commands[] getCommandsAvailable() {
-        return commandsAvailable;
+
+
+
+    public ArrayList<String> getCommands() {
+        return commands;
     }
 
-    public void setCommandsAvailable(Commands[] commandsAvailable) {
-        this.commandsAvailable = commandsAvailable;
-    }
+    public void setCommands(ArrayList<String> commands) {
 
-    @Override
-    public String toString() {
-        return super.getClass().getSimpleName() + ": " + name;
+        this.commands = commands;
     }
 }

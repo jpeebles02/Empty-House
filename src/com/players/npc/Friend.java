@@ -1,8 +1,6 @@
 package com.players.npc;
 
-import com.players.Character;
-
-public class Friend implements Character {
+public class Friend {
     private String name = null;
 
     public Friend(){
@@ -13,11 +11,8 @@ public class Friend implements Character {
         setName(name);
     }
 
-    @Override
-    public void move(){
-        System.out.println(getName() + " is moving");
-    };
 
+//This will get refactored after Meri finishes the player class
     public void talk(){
         System.out.println(getName() + " is talking");
     };
