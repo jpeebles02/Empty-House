@@ -1,4 +1,4 @@
-package com.house;
+package com.House;
 
 
 public class Rooms {

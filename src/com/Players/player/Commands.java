@@ -1,4 +1,4 @@
-package com.players.player;
+package com.Players.player;
 
 public enum Commands {
     //This could be a collection in the future. For now, I am hardcoding some sample strings.

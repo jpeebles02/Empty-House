@@ -1,15 +1,19 @@
+package com.Client;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
 import java.util.*;
-import com.house.Rooms;
+import com.House.Rooms;
 //import com.house.Map;
+import com.Util.*;
 
 
 public class Main {
 
     private static ArrayList <Rooms>map;
+    private Actor player; // Adding player to map
 
     public static void parseCommand(List<String> wordlist) {
         String verb;
@@ -65,6 +69,10 @@ public class Main {
         BufferedReader in;
         String input;
         String output;
+
+        File file = new File("SplashScreen.txt");
+        Scanner scan = new Scanner(file);
+
         map = new ArrayList<Rooms>();
 
         map.add(new Rooms("Entrance", "The place you entered", -1, 2, -2, 1));
@@ -72,8 +80,13 @@ public class Main {
         map.add(new Rooms("Library", "Books are stored here", -1, 1, 0, 1));
         map.add(new Rooms("Dining Room", "Where you eat the food", 0, -1, 0, 0));
 
+//        player = new Actor("player", "This is me", map.get(0));
+
         in = new BufferedReader(new InputStreamReader(System.in));
         do {
+            while(scan.hasNextLine()) {
+                System.out.println(scan.nextLine());
+            }
             System.out.print("> ");
             input = in.readLine();
             output = runCommand(input);

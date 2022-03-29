@@ -1,4 +1,4 @@
-package com.util;
+package com.Util;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -54,6 +54,7 @@ public class JSON_Handler {
     public static void main(String[] args) {
         //Test your json paths here
         System.out.println(getJSON("PlayerCommands.JSON", "json"));
-
+        System.out.println(getJSON("noun.JSON", "json"));
+        System.out.println(getJSON("verbs.JSON", "json"));
     }
 }

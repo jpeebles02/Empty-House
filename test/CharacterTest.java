@@ -1,5 +1,5 @@
-import com.players.player.Commands;
-import com.players.player.Player;
+import com.Players.player.Commands;
+import com.Players.player.Player;
 import org.junit.Assert;
 import org.junit.Test;
 
