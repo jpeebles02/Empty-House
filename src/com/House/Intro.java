@@ -1,6 +1,4 @@
-package com.house;
-
-import java.util.Scanner;
+package com.House;
 
 public class Intro {
     String intro = "It’s Halloween night, your friend invites you to an abandoned house to explore. "+

@@ -1,4 +1,4 @@
-package com.players.npc;
+package com.Players.npc;
 
 public class Animal  {
     private String type;
