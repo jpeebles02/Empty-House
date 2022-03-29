@@ -1,0 +1,34 @@
+{
+  "Items": {
+    "key": [
+      {
+        "location": "entrance"
+      }
+    ],
+    "skeleton key": [
+      {
+        "location": "bathroom"
+      }
+    ],
+    "book": [
+      {
+        "location": "main bedroom"
+      }
+    ],
+    "pan": [
+      {
+        "location": "kitchen"
+      }
+    ],
+    "knife":[
+      {
+        "location": "kitchen"
+      }
+    ],
+    "flashlight": [
+      {
+        "location": "second bedroom"
+      }
+    ]
+  }
+}
