@@ -5,8 +5,7 @@ public class ContainerThing extends ThingHolder implements java.io.Serializable 
     private boolean openable;
     private boolean isopen;
 
-    // By default ContainerThings are open but not openable -
-    // e.g. bowl, sack, basin
+    //Working on making doors and drawers possible to open
     public ContainerThing(String aName, String aDescription, ThingList tl,
                           ThingHolder aContainer) {
         super(aName, aDescription, tl, aContainer);
@@ -14,8 +13,7 @@ public class ContainerThing extends ThingHolder implements java.io.Serializable 
         isopen = true;
     }
 
-    // alternative constructor sets isopen and openable (e.g. something with lid)
-    // e.g. chest, bottle, box
+
     public ContainerThing(String aName, String aDescription,
                           boolean canTake, boolean canMove, boolean canOpen, boolean isOpen,
                           ThingList tl, ThingHolder aContainer) {

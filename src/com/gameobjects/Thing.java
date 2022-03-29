@@ -71,11 +71,11 @@ public class Thing implements java.io.Serializable {
     }
 
     public String open() {
-        return "Cannot open " + name + " because it isn't a container.";
-    }
+        return "Cannot open " + name;
+    } // open door or drawer, but nothing else
 
     public String close() {
-        return "Cannot close " + name + " because it isn't a container.";
+        return "Cannot close " + name;
     }
 
     public String describe() {
