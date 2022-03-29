@@ -1,4 +1,4 @@
-package com.players.npc;
+package com.Players.npc;
 
 public class Friend {
     private String name = null;

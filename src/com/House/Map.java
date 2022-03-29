@@ -1,4 +1,4 @@
-package com.house;
+package com.House;
 
 public class Map {
     String [] location = {"entrance", "kitchen", "dining", "library", "secretRm1", "stairs",
