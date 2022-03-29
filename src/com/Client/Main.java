@@ -1,98 +1,68 @@
 package com.Client;
 
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
-import com.House.Rooms;
-//import com.house.Map;
-import com.Util.*;
-
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class Main {
 
-    private static ArrayList <Rooms>map;
-    private Actor player; // Adding player to map
+    static Game game;
 
-    public static void parseCommand(List<String> wordlist) {
-        String verb;
-        String noun;
-        List<String> commands = new ArrayList<>(Arrays.asList("move", "take", "drop"));
-        List<String> objects = new ArrayList<>(Arrays.asList("key", "book", "north", "south", "east", "west"));
-
-        if (wordlist.size() != 2) {
-            System.out.println("You can only enter two-word commands.");
-        } else {
-            verb = wordlist.get(0);
-            noun = wordlist.get(1);
-            if (!commands.contains(verb)) {
-                System.out.println("I don't know how to " + verb + ".");
-            }
-            if (!objects.contains(noun)) {
-                System.out.println("I don't know what a " + noun + " is.");
-            }
+    private static void saveGame() {
+        try {
+            FileOutputStream fos = new FileOutputStream("Adv.sav");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(game); // game
+            oos.flush(); // write out any buffered bytes
+            oos.close();
+            System.out.print("Game saved\n");
+        } catch (Exception e) {
+            System.out.print("Serialization Error! Can't save data.\n"
+                    + e.getClass() + ": " + e.getMessage() + "\n");
         }
     }
 
-    public static List<String> worldList(String input) {
-        String delims = " \t,.:;?!\"'";
-        List<String> strlist = new ArrayList<>();
-        StringTokenizer tokenizer = new StringTokenizer(input, delims);
-        String t;
-
-        while(tokenizer.hasMoreTokens()) {
-            t = tokenizer.nextToken();
-            strlist.add(t);
+    private static void loadGame() {
+        try {
+            FileInputStream fis = new FileInputStream("Adv.sav");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            game = (Game) ois.readObject();
+            ois.close();
+            System.out.print("\n---Game loaded---\n");
+        } catch (Exception e) {
+            System.out.print("Serialization Error! Can't load data.\n");
+            System.out.print(e.getClass() + ": " + e.getMessage() + "\n");
         }
-        return strlist;
-    }
-
-    public static String runCommand(String inputstr) {
-        List<String> wl;
-        String s = "ok";
-        String lowstr = inputstr.trim().toLowerCase();
-
-        if (!lowstr.equals("q")) {
-            if (lowstr.equals("")) {
-                s = "You may enter a command";
-            } else {
-                wl = worldList(lowstr);
-                wl.forEach((astr) -> System.out.println(astr));
-                parseCommand(wl);
-            }
-        }
-        return s;
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader in;
         String input;
         String output;
-
-        File file = new File("SplashScreen.txt");
-        Scanner scan = new Scanner(file);
-
-        map = new ArrayList<Rooms>();
-
-        map.add(new Rooms("Entrance", "The place you entered", -1, 2, -2, 1));
-        map.add(new Rooms("Kitchen", "Where you cook food", 1, 2, 0, -1));
-        map.add(new Rooms("Library", "Books are stored here", -1, 1, 0, 1));
-        map.add(new Rooms("Dining Room", "Where you eat the food", 0, -1, 0, 0));
-
-//        player = new Actor("player", "This is me", map.get(0));
-
+        game = new Game();
         in = new BufferedReader(new InputStreamReader(System.in));
+        game.showIntro();
         do {
-            while(scan.hasNextLine()) {
-                System.out.println(scan.nextLine());
-            }
             System.out.print("> ");
             input = in.readLine();
-            output = runCommand(input);
-            System.out.println("You entered '" + input + "'");
-        }while (!"q".equals(input));
-
+            output = "";
+            switch (input) {
+                case "save":
+                    saveGame();
+                    break;
+                case "load":
+                    loadGame();
+                    break;
+                default:
+                    output = game.runCommand(input);
+                    break;
+            }
+            System.out.println(output);
+        } while (!"quit".equals(input));
     }
 
 
