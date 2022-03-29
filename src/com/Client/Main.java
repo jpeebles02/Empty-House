@@ -12,9 +12,9 @@ public class Main {
 
     static Game game;
 
-    private static void saveGame() {
+    private static void saveGame() { // writes to Ehouse.sav
         try {
-            FileOutputStream fos = new FileOutputStream("Adv.sav");
+            FileOutputStream fos = new FileOutputStream("Ehouse.sav");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(game); // game
             oos.flush(); // write out any buffered bytes
@@ -28,7 +28,7 @@ public class Main {
 
     private static void loadGame() {
         try {
-            FileInputStream fis = new FileInputStream("Adv.sav");
+            FileInputStream fis = new FileInputStream("Ehouse.sav"); // load from Ehouse.sav
             ObjectInputStream ois = new ObjectInputStream(fis);
             game = (Game) ois.readObject();
             ois.close();
