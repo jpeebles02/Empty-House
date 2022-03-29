@@ -11,18 +11,16 @@ public class Parser {
     static HashMap<String, WT> vocab = new HashMap<>();
 
     static void initVocab() {
-        vocab.put("acorn", WT.NOUN);
-        vocab.put("bed", WT.NOUN);
-        vocab.put("bone", WT.NOUN);
-        vocab.put("bowl", WT.NOUN);
+        vocab.put("north", WT.NOUN);
+        vocab.put("south", WT.NOUN);
+        vocab.put("east", WT.NOUN);
+        vocab.put("west", WT.NOUN);
         vocab.put("box", WT.NOUN);
         vocab.put("button", WT.NOUN);
         vocab.put("carrot", WT.NOUN);
         vocab.put("chest", WT.NOUN);
         vocab.put("coin", WT.NOUN);
         vocab.put("door", WT.NOUN);
-        vocab.put("dust", WT.NOUN);
-        vocab.put("gardenia", WT.NOUN);
         vocab.put("key", WT.NOUN);
         vocab.put("knife", WT.NOUN);
         vocab.put("lamp", WT.NOUN);
@@ -34,17 +32,14 @@ public class Parser {
         vocab.put("sausage", WT.NOUN);
         vocab.put("sign", WT.NOUN);
         vocab.put("slot", WT.NOUN);
-        vocab.put("squirrel", WT.NOUN);
-        vocab.put("tree", WT.NOUN);
-        vocab.put("wombat", WT.NOUN);
         vocab.put("test", WT.VERB);
         vocab.put("get", WT.VERB);
-        vocab.put("i", WT.VERB);
+        vocab.put("i", WT.VERB); // abbrev. for inventory
         vocab.put("inventory", WT.VERB);
         vocab.put("take", WT.VERB);
         vocab.put("drop", WT.VERB);
         vocab.put("put", WT.VERB);
-        vocab.put("l", WT.VERB);
+        vocab.put("l", WT.VERB); // abbrev. for look
         vocab.put("look", WT.VERB);
         vocab.put("open", WT.VERB);
         vocab.put("close", WT.VERB);
@@ -66,7 +61,7 @@ public class Parser {
         vocab.put("at", WT.PREPOSITION);
     }
 
-    static String processVerbNounPrepositionNoun(List<WordAndType> command) {
+    static String processVerbNounPrepositionNoun(List<WordAndType> command) { // allowing user to use at, to, the, on and the parser won't throw an exception
         WordAndType wt = command.get(0);
         WordAndType wt2 = command.get(1);
         WordAndType wt3 = command.get(2);
@@ -76,9 +71,9 @@ public class Parser {
         if ((wt.getWordtype() != WT.VERB) || (wt3.getWordtype() != WT.PREPOSITION)) {
             msg = "Can't do this because I don't understand how to '" + wt.getWord() + " something " + wt3.getWord() + "' something!";
         } else if (wt2.getWordtype() != WT.NOUN) {
-            msg = "Can't do this because '" + wt2.getWord() + "' is not an object!\r\n";
+            msg = "Can't do this because '" + wt2.getWord() + "' is not thing!\r\n";
         } else if (wt4.getWordtype() != WT.NOUN) {
-            msg = "Can't do this because '" + wt4.getWord() + "' is not an object!\r\n";
+            msg = "Can't do this because '" + wt4.getWord() + "' is not a thing!\r\n";
         } else {
             switch (wt.getWord() + wt3.getWord()) {
                 case "putin":
@@ -128,7 +123,7 @@ public class Parser {
         if (wt.getWordtype() != WT.VERB) {
             msg = "Can't do this because '" + wt.getWord() + "' is not a command!";
         } else if (wt2.getWordtype() != WT.NOUN) {
-            msg = "Can't do this because '" + wt2.getWord() + "' is not an object!";
+            msg = "Can't do this because '" + wt2.getWord() + "' is not a thing!";
         } else {
             switch (wt.getWord()) {
                 case "take":
@@ -145,7 +140,7 @@ public class Parser {
                     msg = Main.game.closeOb(wt2.getWord());
                     break;
                 default:
-                    msg += " (not yet implemented)";
+                    msg += " (Not done yet)";
                     break;
             }
         }
@@ -161,15 +156,19 @@ public class Parser {
         } else {
             switch (wt.getWord()) {
                 case "n":
+                case "north":
                     Main.game.goN();
                     break;
                 case "s":
+                case "south":
                     Main.game.goS();
                     break;
                 case "w":
+                case "west":
                     Main.game.goW();
                     break;
                 case "e":
+                case "east":
                     Main.game.goE();
                     break;
                 case "up":
@@ -216,7 +215,7 @@ public class Parser {
                     s = processVerbNounPrepositionNoun(command);
                     break;
                 default:
-                    s = "Unable to process command";
+                    s = "Unable to understand";
                     break;
             }
         }
