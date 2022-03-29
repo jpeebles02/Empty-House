@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Parser {
 
-    static HashMap<String, WT> vocab = new HashMap<>();
+    static HashMap<String, WT> vocab = new HashMap<>(); // Will be using the JSON_Handler to read the JSON files
 
     static void initVocab() {
         vocab.put("north", WT.NOUN);
