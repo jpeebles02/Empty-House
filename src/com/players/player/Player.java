@@ -1,32 +1,31 @@
 package com.players.player;
+import com.util.JSON_Handler;
+import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 
-//Will make the player a Singleton during the next push
+
 public class Player  {
+    private static Player singleton = null;
     private String name;
-//    private Commands[] commandsAvailable = Commands.values();
-    private ArrayList<String> commands;
+    private String location;
+    //Will look to refactor this JSONObject
+    private static JSONObject commands = JSON_Handler.getJSON("PlayerCommands.JSON", "json");
+    private ArrayList<String> inventory;
 
-    public Player (){};
 
-    public Player(String name, ArrayList<String> commands) {
+    public static Player getInstance (String name, String location, JSONObject commands){
+        if(singleton == null){
+            singleton = new Player(name, location, commands );
+    }
+        return singleton;
+    };
+
+    Player(String name, String location, JSONObject commands) {
         setName(name);
         setCommands(commands);
+        setLocation(location);
     }
-
-
-    //    public void listCommands(){
-//        if(commandsAvailable == null){
-//            System.out.println(getName() + " has no commands available");
-//        }else{
-//            ArrayList<Commands> cList = new ArrayList<>();
-//            for(Commands c : Commands.values()){
-//                cList.add(c);
-//            }
-//            System.out.println("Your list of commands are: " + cList);
-//        }
-//    }
 
     public String getName() {
         return name;
@@ -36,15 +35,39 @@ public class Player  {
         this.name = name;
     }
 
+    public String getLocation() {
+        return location;
+    }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
-
-    public ArrayList<String> getCommands() {
+    public JSONObject getCommands() {
+        if(commands.isEmpty()){
+            System.out.println("No commands available");
+        }
         return commands;
     }
 
-    public void setCommands(ArrayList<String> commands) {
-
+    public void setCommands(JSONObject commands) {
         this.commands = commands;
+    }
+
+    @Override
+    public String toString() {
+        return super.getClass().getSimpleName() + "{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", inventory=" + inventory +
+                //This can be removed once the command list grows
+                ", commands=" + commands +
+                '}';
+    }
+
+    public static void main(String[] args) {
+
+        Player player = getInstance("Bill", "house", commands);
+        System.out.println(player.getCommands());
     }
 }
