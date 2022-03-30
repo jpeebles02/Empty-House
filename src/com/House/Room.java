@@ -87,8 +87,8 @@ public class Room extends ThingHolder implements java.io.Serializable {
     }
 
     public String describe() {
-        String roomdesc;
-        String thingsdesc;
+        String roomdesc; // Describes the room player is in
+        String thingsdesc; // tells what's in the room
 
         roomdesc = String.format("%s. %s.", getName(), getDescription());
         thingsdesc = describeThings();

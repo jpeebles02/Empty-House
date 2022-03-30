@@ -34,6 +34,7 @@ public class Parser {
         vocab.put("slot", WT.NOUN);
         vocab.put("test", WT.VERB);
         vocab.put("get", WT.VERB);
+        vocab.put("move", WT.VERB);
         vocab.put("i", WT.VERB); // abbrev. for inventory
         vocab.put("inventory", WT.VERB);
         vocab.put("take", WT.VERB);
