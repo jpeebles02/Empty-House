@@ -24,6 +24,8 @@ public class Parser {
         vocab.put("coin", WT.NOUN);
         vocab.put("door", WT.NOUN);
         vocab.put("key", WT.NOUN);
+        vocab.put("finger", WT.NOUN);
+        vocab.put("skeleton key", WT.NOUN);
         vocab.put("knife", WT.NOUN);
         vocab.put("lamp", WT.NOUN);
         vocab.put("leaflet", WT.NOUN);
