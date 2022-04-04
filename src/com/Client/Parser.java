@@ -1,5 +1,6 @@
 package com.Client;
 
+import com.Util.Dir;
 import com.Util.WT;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class Parser {
         vocab.put("box", WT.NOUN);
         vocab.put("button", WT.NOUN);
         vocab.put("carrot", WT.NOUN);
+        vocab.put("cat", WT.NOUN);
         vocab.put("chest", WT.NOUN);
         vocab.put("coin", WT.NOUN);
         vocab.put("door", WT.NOUN);
@@ -46,10 +48,10 @@ public class Parser {
         vocab.put("close", WT.VERB);
         vocab.put("pull", WT.VERB);
         vocab.put("push", WT.VERB);
-        vocab.put("n", WT.VERB);
-        vocab.put("s", WT.VERB);
-        vocab.put("w", WT.VERB);
-        vocab.put("e", WT.VERB);
+        vocab.put("north", WT.VERB);
+        vocab.put("south", WT.VERB);
+        vocab.put("west", WT.VERB);
+        vocab.put("east", WT.VERB);
         vocab.put("up", WT.VERB);
         vocab.put("down", WT.VERB);
         vocab.put("q", WT.VERB);
@@ -140,6 +142,7 @@ public class Parser {
                 case "close":
                     msg = Main.game.closeOb(wt2.getWord());
                     break;
+                case "move":
                 default:
                     msg += " (Not done yet)";
                     break;
@@ -156,20 +159,20 @@ public class Parser {
             msg = "Can't do this because '" + wt.getWord() + "' is not a command!";
         } else {
             switch (wt.getWord()) {
-                case "n":
                 case "north":
+                case "move north":
                     Main.game.goN();
                     break;
-                case "s":
                 case "south":
+                case "move south":
                     Main.game.goS();
                     break;
-                case "w":
                 case "west":
+                case "move west":
                     Main.game.goW();
                     break;
-                case "e":
                 case "east":
+                case "move east":
                     Main.game.goE();
                     break;
                 case "up":

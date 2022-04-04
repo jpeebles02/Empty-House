@@ -2,7 +2,7 @@ package com.gameobjects;
 
 public class Thing implements java.io.Serializable {
 
-    // Basic Thing type that defines all objects in the Adventure
+
     private String name;
     private String description;
     private boolean takable;

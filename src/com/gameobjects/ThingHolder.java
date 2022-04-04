@@ -34,15 +34,7 @@ public class ThingHolder extends Thing implements java.io.Serializable {
     public int numberOfThings(){
         return things.size();
     }
-    /*
-     * Thing is 'here' if it is visible (e.g. it's in a Room if it is an object
-     * in that room or an object in an open container in that room).
-     *
-     * Recursively look for a Thing called obname in the list maintained by the
-     * ThingHolder th. If found in that list any list 'branching off' it, the
-     * object variable t_and_th is initialized with the Thing and the
-     * ThingHolder which 'contains' it.
-     */
+
     private void findThingInAnyList(ThingHolder th, String obname) {
         boolean found = false;
         ContainerThing container;
