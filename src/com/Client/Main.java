@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import com.Client.BackgroundMusic;
 
 public class Main {
 
     static Game game;
+    static BackgroundMusic bg = new BackgroundMusic();
 
     private static void saveGame() { // writes to Ehouse.sav
         try {
@@ -31,6 +33,7 @@ public class Main {
             FileInputStream fis = new FileInputStream("Ehouse.sav"); // load from Ehouse.sav
             ObjectInputStream ois = new ObjectInputStream(fis);
             game = (Game) ois.readObject();
+            bg.playSound();  //play music
             ois.close();
             System.out.print("\n---Game loaded---\n");
         } catch (Exception e) {
