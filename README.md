@@ -9,7 +9,7 @@ Empty House, by Sterling "Meri" Meriweather, Sarah Lichy, Josh Paige
 1: Introduction
 
 Welcome to Adventure. In the coming hours, you will embark on a mysterious journey to escape the mysterious
-landscape that you have inexplicably woken up in. The best tool you have with you is the power of exploration.
+landscape that you have inexplicably walked into with your friend. The best tool you have with you is the power of exploration.
 In order to ultimately escape, you will have to explore your surroundings, encountering a variety of items along
 the way. 
 
