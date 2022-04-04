@@ -32,9 +32,7 @@ public class Actor extends ThingHolder implements java.io.Serializable {
         return "You have " + s;
     }
 
-    // is the thing found in any list (including 'nested' lists
-    // either in the player's inventory or in the current location?
-    // If so, return ThingAndThingHolder initialized with Thing/ThingHolder
+
     public ThingAndThingHolder isThingHere(String obname) {
         ThingAndThingHolder t_th;
 

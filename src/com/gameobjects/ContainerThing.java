@@ -34,7 +34,7 @@ public class ContainerThing extends ThingHolder implements java.io.Serializable 
         return isopen;
     }
 
-    // --- actions on a Container
+
     @Override
     public String open() {
         String s;

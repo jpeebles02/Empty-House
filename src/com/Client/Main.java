@@ -43,11 +43,13 @@ public class Main {
         BufferedReader in;
         String input;
         String output;
+// correcting previous commit
+
         game = new Game();
         in = new BufferedReader(new InputStreamReader(System.in));
         game.showIntro();
         do {
-            System.out.print("> ");
+            System.out.print("Enter your command > ");
             input = in.readLine();
             output = "";
             switch (input) {

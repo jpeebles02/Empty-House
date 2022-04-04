@@ -7,14 +7,14 @@ import com.gameobjects.ThingList;
 
 public class Room extends ThingHolder implements java.io.Serializable {
 
-    private Room n, s, w, e, up, down;
+    private Room north, south, west, east, up, down;
 
     public Room() {
         super("New Room", "", null, null); // init superclass
-        this.n = null;
-        this.s = null;
-        this.w = null;
-        this.e = null;
+        this.north = null;
+        this.south = null;
+        this.west = null;
+        this.east = null;
         this.up = null;
         this.down = null;
     }
@@ -24,10 +24,10 @@ public class Room extends ThingHolder implements java.io.Serializable {
                      ThingList tl) {
         setName(aName);
         setDescription(aDescription);
-        this.n = aN;
-        this.s = aS;
-        this.w = aW;
-        this.e = aE;
+        this.north = aN;
+        this.south = aS;
+        this.west = aW;
+        this.east = aE;
         this.up = anUp;
         this.down = aDown;
         setThings(tl);
@@ -36,38 +36,38 @@ public class Room extends ThingHolder implements java.io.Serializable {
     // --- accessor methods ---
     // n
     public Room getN() {
-        return n;
+        return north;
     }
 
     public void setN(Room aN) {
-        this.n = aN;
+        this.north = aN;
     }
 
     // s
     public Room getS() {
-        return s;
+        return south;
     }
 
     public void setS(Room aS) {
-        this.s = aS;
+        this.south = aS;
     }
 
     // e
     public Room getE() {
-        return e;
+        return east;
     }
 
     public void setE(Room aE) {
-        this.e = aE;
+        this.east = aE;
     }
 
     // w
     public Room getW() {
-        return w;
+        return west;
     }
 
     void setW(Room aW) {
-        this.w = aW;
+        this.west = aW;
     }
 
     public Room getUp() {
