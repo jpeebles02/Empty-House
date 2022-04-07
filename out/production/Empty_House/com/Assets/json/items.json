@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+[
+  {
+    "item": {
+      "itemName": "key",
+      "itemLocation": "entrance"
+    }
+  },
+  {
+    "item": {
+      "itemName": "skeleton key",
+      "itemLocation": "bathroom"
+    }
+  },
+  {
+    "item": {
+      "itemName": "book",
+      "itemLocation": "main bedroom"
+    }
+  },
+  {
+    "item": {
+      "itemName": "pan",
+      "itemLocation": "kitchen"
+    }
+  },
+  {
+    "item": {
+      "itemName": "knife",
+      "itemLocation": "kitchen"
+    }
+  },
+  {
+    "item": {
+      "itemName": "flashlight",
+      "itemLocation": "second bedroom"
+    }
+  }
+]
+=======
 {
   "Items": {
     "key": [
@@ -32,3 +72,4 @@
     ]
   }
 }
+>>>>>>> d2e2d233a31022d6b16e2294f3920ae1daf6789b

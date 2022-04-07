@@ -20,6 +20,7 @@ public class GUI {
     JLabel labelName, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font fontTitle = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
+    Font textFont = new Font("Times New Roman", Font.PLAIN, 24);
     JButton startButton, optionOneButton, optionTwoButton, optionThreeButton, optionFourButton;
     JTextArea mainTextArea;
     TitleScreen tScreen = new TitleScreen();
@@ -75,11 +76,11 @@ public class GUI {
         mainTextPanel.setBackground(Color.black);
         con.add(mainTextPanel);
 
-        mainTextArea = new JTextArea("Welcome to Empty House!");
+        mainTextArea = new JTextArea("It’s Halloween night, your friend invites you to an abandoned house to explore. After some convincing you decide to go in, as you enter the door slams shut behind you. You and your   friend realize it is now locked and decide to split up to try     and find another way out. He decides to go upstairs to look       around, where would you like to go on the ground floor?");
         mainTextArea.setBounds(100, 100, 600, 250);
         mainTextArea.setBackground(Color.black);
         mainTextArea.setForeground(Color.white);
-        mainTextArea.setFont(normalFont);
+        mainTextArea.setFont(textFont);
         mainTextArea.setLineWrap(true);
         mainTextPanel.add(mainTextArea);
 

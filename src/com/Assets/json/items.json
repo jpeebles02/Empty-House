@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "item": {
@@ -36,3 +37,39 @@
     }
   }
 ]
+=======
+{
+  "Items": {
+    "key": [
+      {
+        "location": "entrance"
+      }
+    ],
+    "skeleton key": [
+      {
+        "location": "bathroom"
+      }
+    ],
+    "book": [
+      {
+        "location": "main bedroom"
+      }
+    ],
+    "pan": [
+      {
+        "location": "kitchen"
+      }
+    ],
+    "knife":[
+      {
+        "location": "kitchen"
+      }
+    ],
+    "flashlight": [
+      {
+        "location": "second bedroom"
+      }
+    ]
+  }
+}
+>>>>>>> d2e2d233a31022d6b16e2294f3920ae1daf6789b
