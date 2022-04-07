@@ -7,12 +7,15 @@ import com.gameobjects.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 import com.Client.*;
+
+import javax.sound.sampled.*;
 
 
 public class Game implements java.io.Serializable {
@@ -203,7 +206,7 @@ public class Game implements java.io.Serializable {
     public void showIntro() throws FileNotFoundException {
 
         String s;
-        File file = new File("SplashScreen.txt");
+        File file = new File("./Empty_House/SplashScreen.txt");
         Scanner scan = new Scanner(file);
 
         while(scan.hasNextLine()){
@@ -240,5 +243,22 @@ public class Game implements java.io.Serializable {
         return s;
     }
 
+    // Background music
+    static Clip clip;
 
+    public static void playAudio() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File song = new File("./resources/horror.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(song);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioStream);
+        clip.start();
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
+        clip.flush();
+    }
+
+    public void stopAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+        clip.stop();
+        clip.flush();
+        clip.close();
+    }
 }
