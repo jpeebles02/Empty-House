@@ -1,9 +1,8 @@
 {
   "House": {
-    "Entrance": [
+    "Location": [
       {
-        "room_name": "Entrance",
-        "location": "entrance"
+        "room_name": "Entrance"
       },
       {
         "directions": {
@@ -17,10 +16,9 @@
         "description": "After your friend disappears looking for a way out you have to decide what area of the house you want to look first. \n You see stairs leading up to your north. \n A kitchen to your west \n and a Library to your east."
       }
     ],
-    "Kitchen": [
+    "Location": [
       {
-        "room": "Kitchen",
-        "location": "kitchen"
+        "room_name": "Kitchen"
       },
       {
         "directions": {
@@ -34,10 +32,9 @@
         "description": "You enter the dirty kitchen and are approached by a cat with what appears to be a key around its collar, \nyou reach for it thinking it could be a key to a way out.  The cat runs out of arms distance.\n  You look around the kitchen for anything to lure the cat back out, you see a knife, fish, and pan."
       }
     ],
-    "Dining Room": [
+    "Location": [
       {
-        "room": "Dining Room",
-        "location": "dining"
+        "room_name": "Dining Room"
       },
       {
         "directions": {
@@ -51,10 +48,9 @@
         "description": "You enter the dining room and right away you notice a butler standing in the corner with a tray."
       }
     ],
-    "Library": [
+    "Location": [
       {
-        "room": "Library",
-        "location": "library"
+        "room_name": "Library"
       },
       {
         "directions": {
@@ -68,10 +64,9 @@
         "description": "You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs besides one section that looks clean and has a book missing."
       }
     ],
-      "Main Bedroom": [
+      "Location": [
         {
-          "room": "Main bedroom",
-          "location": "main bedroom"
+          "room_name": "Main bedroom"
         },
         {
           "directions": {
@@ -85,10 +80,9 @@
           "description": "You approach the main bedroom but it is locked and requires a key. \n Have you collected the key?"
         }
       ],
-      "Second Bedroom": [
+      "Location": [
         {
-          "room": "Second Bedroom",
-          "location": "second bedroom"
+          "room_name": "Second Bedroom"
         },
         {
           "directions": {
@@ -102,10 +96,9 @@
           "description": "you enter the second bedroom and see a maid standing in the room looking out the window"
         }
       ],
-      "Bathroom": [
+      "Location": [
         {
-          "room": "Bathroom",
-          "location": "bathroom"
+          "room_name": "Bathroom"
         },
         {
           "directions": {
@@ -119,10 +112,9 @@
           "description": "In the bathroom you see a bunch of random items on the sink, a skeleton key catches your eye poking out slightly under a box"
         }
       ],
-      "Stairs": [
+      "Location": [
         {
-          "room": "Stairs",
-          "location": "stairs"
+          "room_name": "Stairs"
         },
         {
           "directions": {
@@ -136,10 +128,9 @@
           "description": "as you stand at the top of the stairs you see three directions you could check. \n to the east is a second bedroom- \n to the west is a main bedroom \n or south and go back to the entrance"
         }
       ],
-      "Secret Room1": [
+      "Location": [
         {
-          "room": "secretRm1",
-          "location": "secretRm1"
+          "room_name": "Secret Room 1"
         },
         {
           "directions": {
@@ -153,10 +144,9 @@
           "description": "Once you enter the room you notice a passage going down through the floor. \n you can go south and see where the passage leads \n or go north back into the library"
         }
       ],
-      "Passage": [
+      "Location": [
         {
-          "room": "Passage",
-          "location": "passage"
+          "room_name": "Passage"
         },
         {
           "directions": {
@@ -170,10 +160,9 @@
           "description": "You enter the dark passage that has a ladder going down into a dimly lit room"
         }
       ],
-      "Basement": [
+      "Location": [
         {
-          "room": "Basement",
-          "location": "basement"
+          "room_name": "Basement"
         },
         {
           "directions": {
@@ -187,10 +176,9 @@
           "description": "as you emerge out of the passage you enter a dimly lit room, you look around as your eyes adjust to the light.  You notice dusty items scattered throughout the room besides a tall metal door on the other side.  As you approach the door you see it is locked with a rusty padlock.  Do you have the key in your bag?"
         }
       ],
-      "Secret room2": [
+      "Location": [
         {
-          "room": "Secret Room",
-          "location": "secretRm2"
+          "room_name": "Secret Room 2"
         },
         {
           "directions": {
