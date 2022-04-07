@@ -246,8 +246,6 @@ public class Game implements java.io.Serializable {
     void AddItems () {
         String input = "";
         String itemNameOption = "";
-        String itemDescriptionOption = "";
-        String itemAttributeOption = "";
         String itemLocationOption = "";
 
         JSONParser jsonParser = new JSONParser();
@@ -262,7 +260,7 @@ public class Game implements java.io.Serializable {
 
         if (input.equals("Y")) {
             try {
-                Object obj = jsonParser.parse(new FileReader("item.json"));
+                Object obj = jsonParser.parse(new FileReader("items.json"));
                 JSONArray jsonArray = (JSONArray) obj;
 
                 System.out.println(jsonArray);
@@ -271,16 +269,6 @@ public class Game implements java.io.Serializable {
                 itemNameOption = in.nextLine();
                 System.out.println("You have entered: " + itemNameOption);
                 addItems.put("itemName", itemNameOption);
-
-                System.out.println("You have the option of adding in an item description. Simply type in your command description phrase. ");
-                itemDescriptionOption = in.nextLine();
-                System.out.println("You have entered: " + itemDescriptionOption);
-                addItems.put("itemDescription", itemDescriptionOption);
-
-                System.out.println("You have the option of adding in an item attribute. Simply type in your command example. ");
-                itemAttributeOption = in.nextLine();
-                System.out.println("You have entered: " + itemAttributeOption);
-                addItems.put("itemAttribute", itemAttributeOption);
 
                 System.out.println("You have the option of adding in an item location. Simply type in your command example. ");
                 itemLocationOption = in.nextLine();
@@ -291,7 +279,7 @@ public class Game implements java.io.Serializable {
                 System.out.println("Your options have been added to the list ");
                 System.out.println(jsonArray);
 
-                FileWriter file = new FileWriter("item.json");
+                FileWriter file = new FileWriter("items.json");
                 file.write(jsonArray.toJSONString());
                 file.flush();
                 file.close();
@@ -312,7 +300,6 @@ public class Game implements java.io.Serializable {
         String input = "";
         String locationNameOption = "";
         String locationDescriptionOption = "";
-        String locationItemsOption = "";
         String locationDirectionsOption = "";
 
         JSONParser jsonParser = new JSONParser();

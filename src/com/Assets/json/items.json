@@ -1,34 +1,38 @@
-{
-  "Items": {
-    "key": [
-      {
-        "location": "entrance"
-      }
-    ],
-    "skeleton key": [
-      {
-        "location": "bathroom"
-      }
-    ],
-    "book": [
-      {
-        "location": "main bedroom"
-      }
-    ],
-    "pan": [
-      {
-        "location": "kitchen"
-      }
-    ],
-    "knife":[
-      {
-        "location": "kitchen"
-      }
-    ],
-    "flashlight": [
-      {
-        "location": "second bedroom"
-      }
-    ]
+[
+  {
+    "item": {
+      "itemName": "key",
+      "itemLocation": "entrance"
+    }
+  },
+  {
+    "item": {
+      "itemName": "skeleton key",
+      "itemLocation": "bathroom"
+    }
+  },
+  {
+    "item": {
+      "itemName": "book",
+      "itemLocation": "main bedroom"
+    }
+  },
+  {
+    "item": {
+      "itemName": "pan",
+      "itemLocation": "kitchen"
+    }
+  },
+  {
+    "item": {
+      "itemName": "knife",
+      "itemLocation": "kitchen"
+    }
+  },
+  {
+    "item": {
+      "itemName": "flashlight",
+      "itemLocation": "second bedroom"
+    }
   }
-}
+]
