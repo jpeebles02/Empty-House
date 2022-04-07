@@ -244,6 +244,7 @@ public class Game implements java.io.Serializable {
     }
 
     void AddItems () {
+        //add function to game class
         String input = "";
         String itemNameOption = "";
         String itemLocationOption = "";
@@ -297,6 +298,7 @@ public class Game implements java.io.Serializable {
     }
 
     void AddLocations(){
+        //add function to game class
         String input = "";
         String locationNameOption = "";
         String locationDescriptionOption = "";
