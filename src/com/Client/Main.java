@@ -50,7 +50,7 @@ public class Main {
 
         game = new Game();
         in = new BufferedReader(new InputStreamReader(System.in));
-        game.showIntro();
+        game.GUI();
         do {
             System.out.print("Enter your command > ");
             input = in.readLine();
