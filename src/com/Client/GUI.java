@@ -16,13 +16,15 @@ public class GUI {
 
     JFrame frame;
     Container con;
-    JPanel panelName, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
+    JPanel panelName, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, splashTextPanel;
     JLabel labelName, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font fontTitle = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     Font textFont = new Font("Times New Roman", Font.PLAIN, 24);
+    Font smallFont = new Font("Times New Roman", Font.PLAIN, 12);
+    Font tinyFont = new Font("Times New Roman", Font.PLAIN, 6);
     JButton startButton, optionOneButton, optionTwoButton, optionThreeButton, optionFourButton;
-    JTextArea mainTextArea;
+    JTextArea mainTextArea, splashTextArea;
     TitleScreen tScreen = new TitleScreen();
 
     public static void main (String args[]) {
@@ -46,6 +48,50 @@ public class GUI {
         labelName = new JLabel("Empty House");
         labelName.setForeground(Color.white);
         labelName.setFont(fontTitle);
+
+        splashTextPanel = new JPanel();
+        splashTextPanel.setBounds(100, 100, 600, 250);
+        splashTextPanel.setBackground(Color.black);
+        con.add(splashTextPanel);
+
+        splashTextArea = new JTextArea("\n" +
+                     "                      ____\n" +
+                     "                    _           |---||            _\n" +
+                     "                    ||__________|MSJ||___________||\n" +
+                     "                   /_ _ _ _ _ _ |:._|'_ _ _ _ _ _ _\\`.\n" +
+                     "                  /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\:`.\n" +
+                     "                 /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\::`.\n" +
+                     "                /:.___________________________________\\:::`-._\n" +
+                     "            _.-'_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _`::::::`-.._\n" +
+                     "        _.-' _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ `:::::::::`-._\n" +
+                     "      ,'_:._________________________________________________`:_.::::-';`\n" +
+                     "       `.'/ || |:::::`.'/::::::::`.'/::::::::`.'/::::::|.`.'/.|     :|\n" +
+                     "        ||  || |::::::||::::::::::||::::::::::||:::::::|..||..|     ||\n" +
+                     "        ||  || |  __  || ::  ___  || ::  __   || ::    |..||;||     ||\n" +
+                     "        ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_____||__\n" +
+                     "        ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_|_|_||,(      +            +            +\n" +
+                     "        ||_.|| | |::| || :: |:::| || :: |::|  || ::    |.'||..|    _||,|    .-\"-.        .-:-.        .-\"-.\n" +
+                     "     .-'::_.:'.:-.--.-::--.-:.--:-::--.--.--.-::--.--.-:.-::,'.--.'_|| |   / RIP \\      / RIP \\      / RIP \\\n" +
+                     "      );||_|__||_|__|_||__|_||::|_||__|__|__|_||__|__|_|;-'|__|_(,' || '-  |     |      |     |      |     |\n" +
+                     "      ||||  || |. . . ||. . . . . ||. . . . . ||. . . .|::||;''||   ||:'  \\\\     |//  \\\\\\     |//  \\\\\\     |//\n" +
+                     "      ||||.;  _|._._._||._._._._._||._._._._._||._._._.|:'||,, ||,, ____, ` \" \"\" \"    ` ' \"\" \"     \" '  \"\"\" \"\n" +
+                     "\n" +
+                     "\n" +
+                     "            ▓█████  ███▄ ▄███▓ ██▓███  ▄▄▄█████▓▓██   ██▓    ██░ ██  ▒█████   █    ██   ██████ ▓█████\n" +
+                     "            ▓█   ▀ ▓██▒▀█▀ ██▒▓██░  ██▒▓  ██▒ ▓▒ ▒██  ██▒   ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀\n" +
+                     "            ▒███   ▓██    ▓██░▓██░ ██▓▒▒ ▓██░ ▒░  ▒██ ██░   ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███\n" +
+                     "            ▒▓█  ▄ ▒██    ▒██ ▒██▄█▓▒ ▒░ ▓██▓ ░   ░ ▐██▓░   ░▓█ ░██ ▒██   ██░▓▓█  ░██░  ▒   ██▒▒▓█  ▄\n" +
+                     "            ░▒████▒▒██▒   ░██▒▒██▒ ░  ░  ▒██▒ ░   ░ ██▒▓░   ░▓█▒░██▓░ ████▓▒░▒▒█████▓ ▒██████▒▒░▒████▒\n" +
+                     "            ░░ ▒░ ░░ ▒░   ░  ░▒▓▒░ ░  ░  ▒ ░░      ██▒▒▒     ▒ ░░▒░▒░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░\n" +
+                     "             ░ ░  ░░  ░      ░░▒ ░         ░     ▓██ ░▒░     ▒ ░▒░ ░  ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░▒  ░ ░ ░ ░  ░\n" +
+                     "               ░   ░      ░   ░░         ░       ▒ ▒ ░░      ░  ░░ ░░ ░ ░ ▒   ░░░ ░ ░ ░  ░  ░     ░\n" +
+                     "               ░  ░       ░                      ░ ░         ░  ░  ░    ░ ░     ░           ░     ░  ░\n");
+        splashTextArea.setBounds(100, 100, 600, 250);
+        splashTextArea.setBackground(Color.black);
+        splashTextArea.setForeground(Color.white);
+        splashTextArea.setFont(tinyFont);
+        splashTextArea.setLineWrap(true);
+        splashTextPanel.add(splashTextArea);
 
         startButtonPanel = new JPanel();
         startButtonPanel.setBounds(300, 400, 200, 100);
@@ -90,34 +136,35 @@ public class GUI {
         choiceButtonPanel.setLayout(new GridLayout(4,1));
         con.add(choiceButtonPanel);
 
-        optionOneButton = new JButton("Option 1");
+        optionOneButton = new JButton("Enter: north, south, east, west, up, down to move areas");
         optionOneButton.setBackground(Color.black);
         optionOneButton.setForeground(Color.black);
-        optionOneButton.setFont(normalFont);
+        optionOneButton.setFont(smallFont);
         optionOneButton.setFocusPainted(false);
         choiceButtonPanel.add(optionOneButton);
 
 
-        optionTwoButton = new JButton("Option 2");
+        optionTwoButton = new JButton("Look at to inspect an item");
         optionTwoButton.setBackground(Color.black);
         optionTwoButton.setForeground(Color.black);
-        optionTwoButton.setFont(normalFont);
+        optionTwoButton.setFont(smallFont);
         optionTwoButton.setFocusPainted(false);
         choiceButtonPanel.add(optionTwoButton);
 
-        optionThreeButton = new JButton("Option 3");
+        optionThreeButton = new JButton("Take/drop to pick up or drop an item");
         optionThreeButton.setBackground(Color.black);
         optionThreeButton.setForeground(Color.black);
-        optionThreeButton.setFont(normalFont);
+        optionThreeButton.setFont(smallFont);
         optionThreeButton.setFocusPainted(false);
         choiceButtonPanel.add(optionThreeButton);
 
-        optionFourButton = new JButton("Option 4");
+        optionFourButton = new JButton("Or quit");
         optionFourButton.setBackground(Color.black);
         optionFourButton.setForeground(Color.black);
-        optionFourButton.setFont(normalFont);
+        optionFourButton.setFont(smallFont);
         optionFourButton.setFocusPainted(false);
         choiceButtonPanel.add(optionFourButton);
+
 
         playerPanel = new JPanel();
         playerPanel.setBounds(100, 15, 600, 50);
