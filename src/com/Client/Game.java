@@ -18,6 +18,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.sound.sampled.*;
+
 
 public class Game implements java.io.Serializable {
 
@@ -227,6 +229,27 @@ public class Game implements java.io.Serializable {
     //    showStr(s);
     //    look();
     //}
+
+    // Background music
+    Clip clip;
+
+
+    public void playAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+        File song = new File("horror.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(song);
+        clip = AudioSystem.getClip();
+        clip.open(audioStream);
+        clip.start();
+        clip.flush();
+    }
+
+
+
+    public void stopAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+        clip.stop();
+        clip.flush();
+        clip.close();
+    }
 
     public String runCommand(String inputstr) {
         List<String> wordlist;
