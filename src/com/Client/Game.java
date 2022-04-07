@@ -204,26 +204,29 @@ public class Game implements java.io.Serializable {
         return player.lookIn(obname);
     }
 
-    public void showIntro() throws FileNotFoundException {
-
-        String s;
-        File file = new File("SplashScreen.txt");
-        Scanner scan = new Scanner(file);
-
-        while(scan.hasNextLine()){
-            System.out.println(scan.nextLine());
-        }
-        s =     "\n" +
-                "It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
-                "After some convincing you decide to go in, as you enter the door slams shut behind you. \n" +
-                "You and your friend realize it is now locked and decide to split up to try and find another way out. \n" +
-                "He decides to go upstairs to look around, where would you like to go on the ground floor? \n"
-                + "\n" +
-                "Enter: north, south, east, west, up, down to move areas, \n" + "or look at to inspect an item, \n" + "or take,drop to pick up or drop an item, \n"
-                + "or quit to quit.\n"; // some instructions added to make this make more sense
-        showStr(s);
-        look();
+    public void GUI() {
+        new GUI();
     }
+    //public void showIntro() throws FileNotFoundException {
+
+    //    String s;
+    //    File file = new File("SplashScreen.txt");
+    //    Scanner scan = new Scanner(file);
+
+    //    while(scan.hasNextLine()){
+    //        System.out.println(scan.nextLine());
+    //    }
+    //    s =     "\n" +
+    //            "It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
+    //            "After some convincing you decide to go in, as you enter the door slams shut behind you. \n" +
+    //            "You and your friend realize it is now locked and decide to split up to try and find another way out. \n" +
+    //            "He decides to go upstairs to look around, where would you like to go on the ground floor? \n"
+    //            + "\n" +
+    //            "Enter: north, south, east, west, up, down to move areas, \n" + "or look at to inspect an item, \n" + "or take,drop to pick up or drop an item, \n"
+    //            + "or quit to quit.\n"; // some instructions added to make this make more sense
+    //    showStr(s);
+    //    look();
+    //}
 
     public String runCommand(String inputstr) {
         List<String> wordlist;
