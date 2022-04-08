@@ -8,15 +8,19 @@ import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import com.Client.BackgroundMusic;
+import org.json.simple.parser.ParseException;
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Main {
 
     static Game game;
-    static BackgroundMusic bg = new BackgroundMusic();
+    //static BackgroundMusic bg = new BackgroundMusic();
 
     private static void saveGame() { // writes to Ehouse.sav
         try {
-            FileOutputStream fos = new FileOutputStream("Ehouse.sav");
+            FileOutputStream fos = new FileOutputStream("Ehouse.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(game); // game
             oos.flush(); // write out any buffered bytes
@@ -33,7 +37,7 @@ public class Main {
             FileInputStream fis = new FileInputStream("Ehouse.sav"); // load from Ehouse.sav
             ObjectInputStream ois = new ObjectInputStream(fis);
             game = (Game) ois.readObject();
-            bg.playSound();  //play music
+            //bg.playSound();  //play music
             ois.close();
             System.out.print("\n---Game loaded---\n");
         } catch (Exception e) {
@@ -42,19 +46,18 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, UnsupportedAudioFileException, LineUnavailableException, ParseException {
         BufferedReader in;
         String input;
-        String output;
+        String output = "";
 // correcting previous commit
 
         game = new Game();
         in = new BufferedReader(new InputStreamReader(System.in));
         game.GUI();
         do {
-            System.out.print("Enter your command > ");
+            System.out.print("> ");
             input = in.readLine();
-            output = "";
             switch (input) {
                 case "save":
                     saveGame();
@@ -66,7 +69,9 @@ public class Main {
                     output = game.runCommand(input);
                     break;
             }
-            System.out.println(output);
+            if (!output.trim().isEmpty()) {
+                game.showStr(output);
+            }
         } while (!"quit".equals(input));
     }
 
