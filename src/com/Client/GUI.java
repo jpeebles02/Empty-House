@@ -29,6 +29,7 @@ public class GUI extends Game{
     JTextArea mainTextArea, splashTextArea;
     TitleScreen tScreen = new TitleScreen();
     LookButton lButton = new LookButton();
+    TakeButton tButton = new TakeButton();
 
     public static void main (String args[]) {
         new GUI();
@@ -169,6 +170,7 @@ public class GUI extends Game{
         optionThreeButton.setFont(smallFont);
         optionThreeButton.setFocusPainted(false);
         choiceButtonPanel.add(optionThreeButton);
+        optionThreeButton.addActionListener(tButton);
 
         optionFourButton = new JButton("Or quit");
         optionFourButton.setBackground(Color.black);
@@ -210,7 +212,6 @@ public class GUI extends Game{
     }
 
     private class quitListener implements ActionListener{
-        @Override
         public void actionPerformed(ActionEvent e) {
             System.exit(0);
         }
@@ -235,4 +236,9 @@ public class GUI extends Game{
         }
     }
 
+    public class TakeButton implements ActionListener {
+        public void actionPerformed(ActionEvent event){
+            showInventory();
+        }
+    }
 }
