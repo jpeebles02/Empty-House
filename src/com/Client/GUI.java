@@ -1,5 +1,7 @@
 package com.Client;
 
+import com.Util.Dir;
+
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,7 +14,7 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GUI {
+public class GUI extends Game{
 
     JFrame frame;
     Container con;
@@ -26,6 +28,7 @@ public class GUI {
     JButton startButton, optionOneButton, optionTwoButton, optionThreeButton, optionFourButton;
     JTextArea mainTextArea, splashTextArea;
     TitleScreen tScreen = new TitleScreen();
+    LookButton lButton = new LookButton();
 
     public static void main (String args[]) {
         new GUI();
@@ -149,6 +152,7 @@ public class GUI {
         optionOneButton.setFont(smallFont);
         optionOneButton.setFocusPainted(false);
         choiceButtonPanel.add(optionOneButton);
+        startButton.addActionListener(tScreen);
 
 
         optionTwoButton = new JButton("Look at to inspect an item");
@@ -157,6 +161,7 @@ public class GUI {
         optionTwoButton.setFont(smallFont);
         optionTwoButton.setFocusPainted(false);
         choiceButtonPanel.add(optionTwoButton);
+        optionTwoButton.addActionListener(lButton);
 
         optionThreeButton = new JButton("Take/drop to pick up or drop an item");
         optionThreeButton.setBackground(Color.black);
@@ -224,5 +229,10 @@ public class GUI {
         }
     }
 
+    public class LookButton implements ActionListener {
+        public void actionPerformed(ActionEvent event){
+            look();
+        }
+    }
 
 }
