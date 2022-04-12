@@ -20,15 +20,15 @@ import javax.sound.sampled.*;
 
 public class Game implements java.io.Serializable {
 
-    private ArrayList<Room> map;
-    private Actor player;
+    public ArrayList<Room> map;
+    public Actor player;
 
     public Game() {
         Parser.initVocab();
         initGame();
     }
 
-    private void initGame() {
+    public void initGame() {
         this.map = new ArrayList<Room>();
 
 
