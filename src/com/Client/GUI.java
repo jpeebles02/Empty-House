@@ -66,7 +66,8 @@ public class GUI extends Game{
         //splashTextPanel.setBounds(100, 100, 600, 250);
         //splashTextPanel.setBackground(Color.black);
         //con.add(splashTextPanel);
-
+        //frame.add(labelName, BorderLayout.NORTH);
+        //frame.add(splashTextPanel, BorderLayout.WEST);
 
         //splashTextArea = new JTextArea("\n" +
         //             "                                          ____\n" +
@@ -127,13 +128,14 @@ public class GUI extends Game{
         //con.add(splashTextPanel);
         //Creating the MenuBar and adding components
         frame.setVisible(true);
-        //startButton.addActionListener(tScreen);
+        //startButton.addActionListener(tScreenOne);
     }
 
     public void GameScreenOne() {
 
         panelName.setVisible(false);
         startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
 
         mainTextPanel = new JPanel();
         mainTextPanel.setBounds(100, 100, 600, 250);
@@ -192,6 +194,7 @@ public class GUI extends Game{
         optionFourButton.setFont(smallFont);
         optionFourButton.setFocusPainted(false);
         choiceButtonPanel.add(optionFourButton);
+        optionFourButton.addActionListener(wScreen);
         optionFourButton.addActionListener(wButton);
 
         optionFiveButton = new JButton("Quit");
@@ -230,13 +233,20 @@ public class GUI extends Game{
         playerPanel.add(weaponLabelName);
 
         playerSetup();
-        frame.setVisible(true);
 
     }
 
     public void NorthOption(){
         panelName.setVisible(false);
         startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
+        mainTextPanel.setVisible(false);
+        choiceButtonPanel.setVisible(false);
+        optionOneButton.setVisible(false);
+        optionTwoButton.setVisible(false);
+        optionThreeButton.setVisible(false);
+        optionFourButton.setVisible(false);
+        optionFiveButton.setVisible(false);
 
         mainTextPanelNorth = new JPanel();
         mainTextPanelNorth.setBounds(100, 100, 600, 250);
@@ -265,7 +275,7 @@ public class GUI extends Game{
         optionOneButtonNorth.setFont(smallFont);
         optionOneButtonNorth.setFocusPainted(false);
         choiceButtonPanelNorth.add(optionOneButtonNorth);
-        optionOneButtonNorth.addActionListener(tScreenOne);
+        //optionOneButtonNorth.addActionListener(tScreenOne);
 
         optionTwoButtonNorth = new JButton("Quit");
         optionTwoButtonNorth.setBackground(Color.black);
@@ -277,13 +287,16 @@ public class GUI extends Game{
 
         initGame();
         playerSetup();
-        frame.setVisible(true);
 
     }
 
     public void SouthOption(){
         panelName.setVisible(false);
         startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
+        mainTextPanel.setVisible(false);
+        choiceButtonPanel.setVisible(false);
+
 
         mainTextPanelSouth = new JPanel();
         mainTextPanelSouth.setBounds(100, 100, 600, 250);
@@ -312,7 +325,7 @@ public class GUI extends Game{
         optionOneButtonSouth.setFont(smallFont);
         optionOneButtonSouth.setFocusPainted(false);
         choiceButtonPanelSouth.add(optionOneButtonSouth);
-        optionOneButtonSouth.addActionListener(tScreenOne);
+        //optionOneButtonSouth.addActionListener(tScreenOne);
 
         optionTwoButtonSouth = new JButton("Quit");
         optionTwoButtonSouth.setBackground(Color.black);
@@ -323,13 +336,16 @@ public class GUI extends Game{
         optionTwoButtonSouth.addActionListener(new quitListener());
 
         playerSetup();
-        frame.setVisible(true);
 
     }
 
     public void EastOption(){
         panelName.setVisible(false);
         startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
+        mainTextPanel.setVisible(false);
+        choiceButtonPanel.setVisible(false);
+
 
         mainTextPanelEast = new JPanel();
         mainTextPanelEast.setBounds(100, 100, 600, 250);
@@ -358,7 +374,7 @@ public class GUI extends Game{
         optionOneButtonEast.setFont(smallFont);
         optionOneButtonEast.setFocusPainted(false);
         choiceButtonPanelEast.add(optionOneButtonEast);
-        optionOneButtonEast.addActionListener(tScreenOne);
+        //optionOneButtonEast.addActionListener(tScreenOne);
 
 
 
@@ -389,13 +405,16 @@ public class GUI extends Game{
 
         initGame();
         playerSetup();
-        frame.setVisible(true);
 
     }
 
     public void WestOption(){
         panelName.setVisible(false);
         startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
+        mainTextPanel.setVisible(false);
+        choiceButtonPanel.setVisible(false);
+
 
         mainTextPanelWest = new JPanel();
         mainTextPanelWest.setBounds(100, 100, 600, 250);
@@ -424,7 +443,7 @@ public class GUI extends Game{
         optionOneButtonWest.setFont(smallFont);
         optionOneButtonWest.setFocusPainted(false);
         choiceButtonPanelWest.add(optionOneButtonWest);
-        optionOneButtonWest.addActionListener(tScreenOne);
+        //optionOneButtonWest.addActionListener(tScreenOne);
 
 
 
@@ -455,7 +474,6 @@ public class GUI extends Game{
 
         initGame();
         playerSetup();
-        frame.setVisible(true);
 
     }
 
