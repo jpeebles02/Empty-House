@@ -18,25 +18,27 @@ public class GUI extends Game{
 
     JFrame frame;
     Container con;
-    JPanel panelName, startButtonPanel, mainTextPanel, mainTextPanelNorth, mainTextPanelSouth, mainTextPanelWest, mainTextPanelEast, mainTextPanelTwo, choiceButtonPanel, choiceButtonPanelNorth, choiceButtonPanelSouth, choiceButtonPanelEast, choiceButtonPanelWest, choiceButtonPanelTwo, playerPanel, splashTextPanel;
+    JPanel panelName, startButtonPanel, mainTextPanel, mainTextPanelNorth, mainTextPanelSouth, mainTextPanelWest, mainTextPanelDinning, mainTextPanelEast, mainTextPanelTwo, choiceButtonPanel, choiceButtonPanelNorth, choiceButtonPanelSouth, choiceButtonPanelEast, choiceButtonPanelWest, choiceButtonPanelDinning, choiceButtonPanelTwo, playerPanel, splashTextPanel;
     JLabel labelName, hpLabel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font fontTitle = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
     Font textFont = new Font("Times New Roman", Font.PLAIN, 24);
     Font smallFont = new Font("Times New Roman", Font.PLAIN, 12);
     Font tinyFont = new Font("Times New Roman", Font.PLAIN, 6);
-    JButton startButton, optionOneButton, optionOneButtonNorth, optionOneButtonSouth, optionOneButtonWest, optionTwoButtonNorth, optionTwoButtonSouth, optionOneButtonEast, optionTwoButtonWest, optionOneButtonTwo, optionTwoButton, optionTwoButtonEast, optionTwoButtonTwo, optionThreeButton, optionThreeButtonEast, optionThreeButtonWest, optionThreeButtonTwo, optionFourButton, optionFourButtonEast, optionFourButtonWest, optionFourButtonTwo, optionFiveButton;
-    JTextArea mainTextArea, mainTextAreaNorth, mainTextAreaSouth, mainTextAreaEast, mainTextAreaWest, mainTextAreaTwo, splashTextArea;
+    JButton startButton, optionOneButton, optionOneButtonNorth, optionOneButtonSouth, optionOneButtonWest, optionTwoButtonNorth, optionTwoButtonSouth, optionOneButtonEast, optionTwoButtonWest, optionOneButtonDinning, optionTwoButtonDinning, optionThreeButtonDinning, optionFourButtonDinning, optionOneButtonTwo, optionTwoButton, optionTwoButtonEast, optionTwoButtonTwo, optionThreeButton, optionThreeButtonEast, optionThreeButtonWest, optionThreeButtonTwo, optionFourButton, optionFourButtonEast, optionFourButtonWest, optionFourButtonTwo, optionFiveButton;
+    JTextArea mainTextArea, mainTextAreaNorth, mainTextAreaSouth, mainTextAreaEast, mainTextAreaWest, mainTextAreaDinning, mainTextAreaTwo, splashTextArea;
     TitleScreenOne tScreenOne = new TitleScreenOne();
     NorthScreen nScreen = new NorthScreen();
     SouthScreen sScreen = new SouthScreen();
     EastScreen eScreen = new EastScreen();
     WestScreen wScreen = new WestScreen();
+    EastOfKitchenScreen ekScreen = new EastOfKitchenScreen();
     //TitleScreenTwo tScreenTwo = new TitleScreenTwo();
     LookButton lButton = new LookButton();
     TakeButton tButton = new TakeButton();
     NorthButton nButton = new NorthButton();
     SouthButton sButton = new SouthButton();
+    EastOfKitchenButton eastOfKitchenButton = new EastOfKitchenButton();
     EastButton eButton = new EastButton();
     WestButton wButton = new WestButton();
 
@@ -437,13 +439,14 @@ public class GUI extends Game{
         choiceButtonPanelWest.setLayout(new GridLayout(4,1));
         con.add(choiceButtonPanelWest);
 
-        optionOneButtonWest = new JButton("Go back");
+        optionOneButtonWest = new JButton("Go East");
         optionOneButtonWest.setBackground(Color.black);
         optionOneButtonWest.setForeground(Color.black);
         optionOneButtonWest.setFont(smallFont);
         optionOneButtonWest.setFocusPainted(false);
         choiceButtonPanelWest.add(optionOneButtonWest);
-        //optionOneButtonWest.addActionListener(tScreenOne);
+        optionOneButtonWest.addActionListener(eButton);
+        optionOneButtonWest.addActionListener(ekScreen);
 
 
 
@@ -477,6 +480,74 @@ public class GUI extends Game{
 
     }
 
+    public void EastOfKitchen(){
+        panelName.setVisible(false);
+        startButtonPanel.setVisible(false);
+        //splashTextPanel.setVisible(false);
+        mainTextPanel.setVisible(false);
+        choiceButtonPanel.setVisible(false);
+
+
+        mainTextPanelDinning = new JPanel();
+        mainTextPanelDinning.setBounds(100, 100, 600, 250);
+        mainTextPanelDinning.setBackground(Color.black);
+
+
+        mainTextAreaDinning = new JTextArea("You are in the Library. You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs besides one section that looks clean and has a book missing...Things here: paper pencil");
+        mainTextAreaDinning.setBounds(100, 100, 600, 250);
+        mainTextAreaDinning.setBackground(Color.black);
+        mainTextAreaDinning.setForeground(Color.white);
+        mainTextAreaDinning.setFont(textFont);
+        mainTextAreaDinning.setLineWrap(true);
+
+        mainTextPanelDinning.add(mainTextAreaDinning);
+        con.add(mainTextPanelDinning);
+
+        choiceButtonPanelDinning = new JPanel();
+        choiceButtonPanelDinning.setBounds(250, 350, 300, 150);
+        choiceButtonPanelDinning.setBackground(Color.black);
+        choiceButtonPanelDinning.setLayout(new GridLayout(4,1));
+        con.add(choiceButtonPanelDinning);
+
+        optionOneButtonDinning = new JButton("Go North");
+        optionOneButtonDinning.setBackground(Color.black);
+        optionOneButtonDinning.setForeground(Color.black);
+        optionOneButtonDinning.setFont(smallFont);
+        optionOneButtonDinning.setFocusPainted(false);
+        choiceButtonPanelDinning.add(optionOneButtonDinning);
+        optionOneButtonDinning.addActionListener(nButton);
+
+
+
+        optionTwoButtonDinning = new JButton("Look at to inspect an item");
+        optionTwoButtonDinning.setBackground(Color.black);
+        optionTwoButtonDinning.setForeground(Color.black);
+        optionTwoButtonDinning.setFont(smallFont);
+        optionTwoButtonDinning.setFocusPainted(false);
+        choiceButtonPanelDinning.add(optionTwoButtonDinning);
+        optionTwoButtonDinning.addActionListener(lButton);
+
+        optionThreeButtonDinning = new JButton("Take/drop to pick up or drop an item");
+        optionThreeButtonDinning.setBackground(Color.black);
+        optionThreeButtonDinning.setForeground(Color.black);
+        optionThreeButtonDinning.setFont(smallFont);
+        optionThreeButtonDinning.setFocusPainted(false);
+        choiceButtonPanelDinning.add(optionThreeButtonDinning);
+        optionThreeButtonDinning.addActionListener(tButton);
+
+        optionFourButtonDinning = new JButton("Quit");
+        optionFourButtonDinning.setBackground(Color.black);
+        optionFourButtonDinning.setForeground(Color.black);
+        optionFourButtonDinning.setFont(smallFont);
+        optionFourButtonDinning.setFocusPainted(false);
+        choiceButtonPanelDinning.add(optionFourButtonDinning);
+        optionFourButtonDinning.addActionListener(new quitListener());
+
+
+        initGame();
+        playerSetup();
+
+    }
     //public void GameScreenTwo() {
 
     //    panelName.setVisible(false);
@@ -614,6 +685,11 @@ public class GUI extends Game{
         }
     }
 
+    public class EastOfKitchenScreen implements ActionListener {
+        public void actionPerformed(ActionEvent event){
+            EastOfKitchen();
+        }
+    }
     //public class TitleScreenTwo implements ActionListener {
     //    public void actionPerformed(ActionEvent event){
     //        GameScreenTwo();
@@ -641,6 +717,12 @@ public class GUI extends Game{
     public class SouthButton implements ActionListener {
         public void actionPerformed(ActionEvent event){
             goS();
+        }
+    }
+
+    public class EastOfKitchenButton implements ActionListener {
+        public void actionPerformed(ActionEvent event){
+            goE();
         }
     }
 
