@@ -7,10 +7,7 @@ import com.gameobjects.*;
 import java.io.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import com.Client.*;
 import org.json.simple.JSONArray;
@@ -23,15 +20,15 @@ import javax.sound.sampled.*;
 
 public class Game implements java.io.Serializable {
 
-    private ArrayList<Room> map;
-    private Actor player;
+    public ArrayList<Room> map;
+    public Actor player;
 
     public Game() {
         Parser.initVocab();
         initGame();
     }
 
-    private void initGame() {
+    public void initGame() {
         this.map = new ArrayList<Room>();
 
 
@@ -251,14 +248,10 @@ public class Game implements java.io.Serializable {
         clip.close();
     }
 
-    public String runCommand(String inputstr) {
+    public String runCommand(String inputstr) throws IOException, ParseException, UnsupportedAudioFileException, LineUnavailableException{
         List<String> wordlist;
-        String s;
-        String lowstr;
-
-        s = "ok";
-        lowstr = inputstr.trim().toLowerCase();
-
+        String s = "\n";
+        String lowstr = inputstr.trim().toLowerCase();
         if (!lowstr.equals("quit")) {
             if (lowstr.equals("")) {
                 s = "You must enter a command";
@@ -383,5 +376,7 @@ public class Game implements java.io.Serializable {
         }
 
     }
+
+
 
 }
