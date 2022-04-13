@@ -68,7 +68,7 @@ public class GUI extends Game{
 
 
         splashTextPanel = new JPanel(new GridLayout(2, 1, 0, 0));
-        splashTextPanel.setBounds(20, 10, 50, 150);
+        splashTextPanel.setBounds(20, 10, 50, 115);
         splashTextPanel.setBackground(Color.black);
 
         con.add(splashTextPanel);
