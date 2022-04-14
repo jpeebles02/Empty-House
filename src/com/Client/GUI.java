@@ -71,40 +71,40 @@ public class GUI extends Game{
         //frame.add(labelName, BorderLayout.NORTH);
         //frame.add(splashTextPanel, BorderLayout.WEST);
 
-        //splashTextArea = new JTextArea("\n" +
-        //        "                                          ____\n" +
-        //        "                                        _           |---||            _\n" +
-        //        "                                        ||__________|MSJ||___________||\n" +
-        //        "                                       /_ _ _ _ _ _ |:._|'_ _ _ _ _ _ _\\`.\n" +
-        //        "                                      /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\:`.\n" +
-        //        "                                     /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\::`.\n" +
-        //        "                                    /:.___________________________________\\:::`-._\n" +
-        //        "                                _.-'_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _`::::::`-.._\n" +
-        //        "                            _.-' _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ `:::::::::`-._\n" +
-        //        "                          ,'_:._________________________________________________`:_.::::-';`\n" +
-        //        "                           `.'/ || |:::::`.'/::::::::`.'/::::::::`.'/::::::|.`.'/.|     :|\n" +
-        //        "                            ||  || |::::::||::::::::::||::::::::::||:::::::|..||..|     ||\n" +
-        //        "                            ||  || |  __  || ::  ___  || ::  __   || ::    |..||;||     ||\n" +
-        //        "                            ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_____||__\n" +
-        //        "                            ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_|_|_||,(      +            +            +\n" +
-        //        "                            ||_.|| | |::| || :: |:::| || :: |::|  || ::    |.'||..|    _||,|    .-\"-.        .-:-.        .-\"-.\n" +
-        //        "                         .-'::_.:'.:-.--.-::--.-:.--:-::--.--.--.-::--.--.-:.-::,'.--.'_|| |   / RIP \\      / RIP \\      / RIP \\\n" +
-        //        "                          );||_|__||_|__|_||__|_||::|_||__|__|__|_||__|__|_|;-'|__|_(,' || '-  |     |      |     |      |     |\n" +
-        //        "                           ||||  || |. . . ||. . . . . ||. . . . . ||. . . .|::||;''||   ||:'  \\\\     |//  \\\\\\     |//  \\\\\\     |//\n" +
-        //        "                         ||||.;  _|._._._||._._._._._||._._._._._||._._._.|:'||,, ||,, ____, ` \" \"\" \"    ` ' \"\" \"     \" '  \"\"\" \"\n" +
-        //        "\n" +
-        //        "\n" +
-        //        "                                ▓█████  ███▄ ▄███▓ ██▓███  ▄▄▄█████▓▓██   ██▓    ██░ ██  ▒█████   █    ██   ██████ ▓█████\n" +
-        //        "                                ▓█   ▀ ▓██▒▀█▀ ██▒▓██░  ██▒▓  ██▒ ▓▒ ▒██  ██▒   ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀\n" +
-        //        "                                ▒███   ▓██    ▓██░▓██░ ██▓▒▒ ▓██░ ▒░  ▒██ ██░   ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███\n" +
-        //        "                                ▒▓█  ▄ ▒██    ▒██ ▒██▄█▓▒ ▒░ ▓██▓ ░   ░ ▐██▓░   ░▓█ ░██ ▒██   ██░▓▓█  ░██░  ▒   ██▒▒▓█  ▄\n" +
-        //        "                                ░▒████▒▒██▒   ░██▒▒██▒ ░  ░  ▒██▒ ░   ░ ██▒▓░   ░▓█▒░██▓░ ████▓▒░▒▒█████▓ ▒██████▒▒░▒████▒\n" +
-        //        "                                 ░░ ▒░ ░░ ▒░   ░  ░▒▓▒░ ░  ░  ▒ ░░      ██▒▒▒     ▒ ░░▒░▒░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░\n" +
-        //        "                                 ░ ░  ░░  ░      ░░▒ ░         ░     ▓██ ░▒░     ▒ ░▒░ ░  ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░▒  ░ ░ ░ ░  ░\n" +
-        //        "                                    ░   ░      ░   ░░         ░       ▒ ▒ ░░      ░  ░░ ░░ ░ ░ ▒   ░░░ ░ ░ ░  ░  ░     ░\n" +
-        //        "                                   ░  ░       ░                      ░ ░         ░  ░  ░    ░ ░     ░           ░     ░  ░\n");
-        //splashTextArea.setBounds(100, 100, 600, 250);
-        //splashTextArea.setBackground(Color.black);
+        splashTextArea = new JTextArea("\n" +
+                "                                          ____\n" +
+                "                                        _           |---||            _\n" +
+                "                                        ||__________|MSJ||___________||\n" +
+                "                                       /_ _ _ _ _ _ |:._|'_ _ _ _ _ _ _\\`.\n" +
+                "                                      /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\:`.\n" +
+                "                                     /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\\::`.\n" +
+                "                                    /:.___________________________________\\:::`-._\n" +
+                "                                _.-'_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _`::::::`-.._\n" +
+                "                            _.-' _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ `:::::::::`-._\n" +
+                "                          ,'_:._________________________________________________`:_.::::-';`\n" +
+                "                           `.'/ || |:::::`.'/::::::::`.'/::::::::`.'/::::::|.`.'/.|     :|\n" +
+                "                            ||  || |::::::||::::::::::||::::::::::||:::::::|..||..|     ||\n" +
+                "                            ||  || |  __  || ::  ___  || ::  __   || ::    |..||;||     ||\n" +
+                "                            ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_____||__\n" +
+                "                            ||  || | |::| || :: |:::| || :: |::|  || ::    |.|||:||_|_|_||,(      +            +            +\n" +
+                "                            ||_.|| | |::| || :: |:::| || :: |::|  || ::    |.'||..|    _||,|    .-\"-.        .-:-.        .-\"-.\n" +
+                "                         .-'::_.:'.:-.--.-::--.-:.--:-::--.--.--.-::--.--.-:.-::,'.--.'_|| |   / RIP \\      / RIP \\      / RIP \\\n" +
+                "                          );||_|__||_|__|_||__|_||::|_||__|__|__|_||__|__|_|;-'|__|_(,' || '-  |     |      |     |      |     |\n" +
+                "                           ||||  || |. . . ||. . . . . ||. . . . . ||. . . .|::||;''||   ||:'  \\\\     |//  \\\\\\     |//  \\\\\\     |//\n" +
+                "                         ||||.;  _|._._._||._._._._._||._._._._._||._._._.|:'||,, ||,, ____, ` \" \"\" \"    ` ' \"\" \"     \" '  \"\"\" \"\n" +
+                "\n" +
+                "\n" +
+                "                                ▓█████  ███▄ ▄███▓ ██▓███  ▄▄▄█████▓▓██   ██▓    ██░ ██  ▒█████   █    ██   ██████ ▓█████\n" +
+                "                                ▓█   ▀ ▓██▒▀█▀ ██▒▓██░  ██▒▓  ██▒ ▓▒ ▒██  ██▒   ▓██░ ██▒▒██▒  ██▒ ██  ▓██▒▒██    ▒ ▓█   ▀\n" +
+                "                                ▒███   ▓██    ▓██░▓██░ ██▓▒▒ ▓██░ ▒░  ▒██ ██░   ▒██▀▀██░▒██░  ██▒▓██  ▒██░░ ▓██▄   ▒███\n" +
+                "                                ▒▓█  ▄ ▒██    ▒██ ▒██▄█▓▒ ▒░ ▓██▓ ░   ░ ▐██▓░   ░▓█ ░██ ▒██   ██░▓▓█  ░██░  ▒   ██▒▒▓█  ▄\n" +
+                "                                ░▒████▒▒██▒   ░██▒▒██▒ ░  ░  ▒██▒ ░   ░ ██▒▓░   ░▓█▒░██▓░ ████▓▒░▒▒█████▓ ▒██████▒▒░▒████▒\n" +
+                "                                 ░░ ▒░ ░░ ▒░   ░  ░▒▓▒░ ░  ░  ▒ ░░      ██▒▒▒     ▒ ░░▒░▒░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░\n" +
+                "                                 ░ ░  ░░  ░      ░░▒ ░         ░     ▓██ ░▒░     ▒ ░▒░ ░  ░ ▒ ▒░ ░░▒░ ░ ░ ░ ░▒  ░ ░ ░ ░  ░\n" +
+                "                                    ░   ░      ░   ░░         ░       ▒ ▒ ░░      ░  ░░ ░░ ░ ░ ▒   ░░░ ░ ░ ░  ░  ░     ░\n" +
+                "                                   ░  ░       ░                      ░ ░         ░  ░  ░    ░ ░     ░           ░     ░  ░\n");
+        splashTextArea.setBounds(100, 100, 600, 250);
+        splashTextArea.setBackground(Color.black);
         //splashTextArea.setForeground(Color.white);
         //splashTextArea.setFont(tinyFont);
         //splashTextArea.setLineWrap(true);
@@ -547,6 +547,99 @@ public class GUI extends Game{
         playerSetup();
 
     }
+    //public void GameScreenTwo() {
+
+    //    panelName.setVisible(false);
+    //    startButtonPanel.setVisible(false);
+
+    //    mainTextPanelTwo = new JPanel();
+    //    mainTextPanelTwo.setBounds(100, 100, 600, 250);
+    //    mainTextPanelTwo.setBackground(Color.black);
+
+
+    //    mainTextAreaTwo = new JTextArea("");
+    //    mainTextAreaTwo.setBounds(100, 100, 600, 250);
+    //    mainTextAreaTwo.setBackground(Color.black);
+    //    mainTextAreaTwo.setForeground(Color.white);
+    //    mainTextAreaTwo.setFont(textFont);
+    //    mainTextAreaTwo.setLineWrap(true);
+
+    //    mainTextPanelTwo.add(mainTextAreaTwo);
+    //    con.add(mainTextPanelTwo);
+
+    //    choiceButtonPanelTwo = new JPanel();
+    //    choiceButtonPanelTwo.setBounds(250, 350, 300, 150);
+    //    choiceButtonPanelTwo.setBackground(Color.black);
+    //    choiceButtonPanelTwo.setLayout(new GridLayout(4,1));
+    //    con.add(choiceButtonPanelTwo);
+
+
+    //    optionOneButtonTwo = new JButton("Enter: north, south, east, west, up, down to move areas");
+    //    optionOneButtonTwo.setBackground(Color.black);
+    //    optionOneButtonTwo.setForeground(Color.black);
+    //    optionOneButtonTwo.setFont(smallFont);
+    //    optionOneButtonTwo.setFocusPainted(false);
+    //    choiceButtonPanelTwo.add(optionOneButton);
+    //    optionOneButtonTwo.addActionListener(eButton);
+
+
+
+    //    optionTwoButtonTwo = new JButton("Look at to inspect an item");
+    //    optionTwoButtonTwo.setBackground(Color.black);
+    //    optionTwoButtonTwo.setForeground(Color.black);
+    //    optionTwoButtonTwo.setFont(smallFont);
+    //    optionTwoButtonTwo.setFocusPainted(false);
+    //    choiceButtonPanelTwo.add(optionTwoButton);
+    //    optionTwoButtonTwo.addActionListener(lButton);
+
+    //    optionThreeButtonTwo = new JButton("Take/drop to pick up or drop an item");
+    //    optionThreeButtonTwo.setBackground(Color.black);
+    //    optionThreeButtonTwo.setForeground(Color.black);
+    //    optionThreeButtonTwo.setFont(smallFont);
+    //    optionThreeButtonTwo.setFocusPainted(false);
+    //    choiceButtonPanelTwo.add(optionThreeButton);
+    //    optionThreeButtonTwo.addActionListener(tButton);
+
+    //    optionFourButtonTwo = new JButton("Or quit");
+    //    optionFourButtonTwo.setBackground(Color.black);
+    //    optionFourButtonTwo.setForeground(Color.black);
+    //    optionFourButtonTwo.setFont(smallFont);
+    //    optionFourButtonTwo.setFocusPainted(false);
+    //    choiceButtonPanelTwo.add(optionFourButton);
+    //    optionFourButtonTwo.addActionListener(new quitListener());
+
+
+    //    playerPanel = new JPanel();
+    //    playerPanel.setBounds(100, 15, 600, 50);
+    //    playerPanel.setBackground(Color.black);
+    //    playerPanel.setLayout(new GridLayout(1, 4));
+    //    con.add(playerPanel);
+
+    //    hpLabel = new JLabel("HP:");
+    //    hpLabel.setFont(normalFont);
+    //    hpLabel.setForeground(Color.white);
+    //    playerPanel.add(hpLabel);
+
+    //    hpLabelNumber = new JLabel();
+    //    hpLabelNumber.setFont(normalFont);
+    //    hpLabelNumber.setForeground(Color.white);
+    //    playerPanel.add(hpLabelNumber);
+
+    //    weaponLabel = new JLabel("Weapon:");
+    //    weaponLabel.setFont(normalFont);
+    //    weaponLabel.setForeground(Color.white);
+    //    playerPanel.add(weaponLabel);
+
+    //    weaponLabelName = new JLabel();
+    //    weaponLabelName.setFont(normalFont);
+    //    weaponLabelName.setForeground(Color.white);
+    //    playerPanel.add(weaponLabelName);
+
+
+    //    playerSetup();
+    //    frame.setVisible(true);
+
+    //}
 
     private class quitListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
