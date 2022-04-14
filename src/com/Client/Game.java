@@ -218,7 +218,7 @@ public class Game implements java.io.Serializable {
     //            "It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
     //            "After some convincing you decide to go in, as you enter the door slams shut behind you. \n" +
     //            "You and your friend realize it is now locked and decide to split up to try and find another way out. \n" +
-    //            "He decides to go upstairs to look around, where would you like to go on the ground floor? \n"
+    //            "He decides to go off and look around, where would you like to go? \n"
     //            + "\n" +
     //            "Enter: north, south, east, west, up, down to move areas, \n" + "or look at to inspect an item, \n" + "or take,drop to pick up or drop an item, \n"
     //            + "or quit to quit.\n"; // some instructions added to make this make more sense
