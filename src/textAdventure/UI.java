@@ -1,40 +1,46 @@
-package textAdventure;
+package com.textAdventure;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class UI {
     JFrame window;
-    JPanel titleNamePanel, startPanel, mainTextPanel, choiceButtonPanel, directionButtonPanel, playerPanel, gameInfoButtonPanel;
+    JPanel titleNamePanel, startPanel, mainTextPanel, choiceButtonPanel, directionButtonPanel, playerPanel, gameInfoButtonPanel, musicPanel;
     JLabel titleNameLabel, healthLabel, healthNumberLabel, inventoryLabel, inventoryNameLabel;
     JButton startButton, gameInfoButton, choice1, choice2, choice3, choice4, north, south, east, west, gameInfo1, gameInfo2;
     JTextArea mainTextArea;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
+    Font normalFont = new Font("Times New Roman", Font.PLAIN, 25);
 
     public void createUI(Game.ChoiceHandler cHandler){
 
         //WINDOW
         window = new JFrame();
-        window.setSize(800,600);
+        window.setSize(850,600);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
 
         //TITLE SCREEN
         titleNamePanel = new JPanel();
-        titleNamePanel.setBounds(100, 100, 600, 250);
+        titleNamePanel.setBounds(140, 100, 615, 200);
         titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("ADVENTURE");
+        ImageIcon titleIcon = new ImageIcon("./resources/splashlogo.gif");
+        titleNameLabel = new JLabel(titleIcon);
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
 
         startPanel = new JPanel();
-        startPanel.setBounds(250, 350, 300, 150);
+        startPanel.setBounds(250, 350, 380, 100);
         startPanel.setLayout(new GridLayout(2,1));
         startPanel.setBackground(Color.black);
         window.add(startPanel);
+        window.add(startPanel, BorderLayout.SOUTH);
 
         startButton = new JButton("START");
         startButton.setBackground(Color.black);
@@ -44,6 +50,13 @@ public class UI {
         startButton.addActionListener(cHandler);
         startButton.setActionCommand("start");
         startPanel.add(startButton);
+        startButton.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         gameInfoButton = new JButton("GAME SETTINGS");
         gameInfoButton.setBackground(Color.black);
@@ -53,9 +66,53 @@ public class UI {
         gameInfoButton.addActionListener(cHandler);
         gameInfoButton.setActionCommand("gameInfo");
         startPanel.add(gameInfoButton);
+        gameInfoButton.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         window.add(titleNamePanel);
         window.add(startPanel);
+
+        musicPanel = new JPanel(new GridLayout(2, 1, 0, 0));
+        musicPanel.setBounds(20, 10, 50, 115);
+        musicPanel.setBackground(Color.black);
+        window.add(musicPanel);
+
+        // Buttons to start/stop background music
+        ImageIcon playIcon = new ImageIcon("./resources/play.png");
+        JButton playMusicButton = new JButton(playIcon);
+        playMusicButton.setBorderPainted(false);
+        playMusicButton.setContentAreaFilled(false);
+        playMusicButton.setFocusPainted(false);
+        playMusicButton.setOpaque(false);
+        musicPanel.add(playMusicButton);
+        playMusicButton.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.playAudio();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        ImageIcon stopIcon = new ImageIcon("./resources/stop.png");
+        JButton stopMusicButton = new JButton(stopIcon);
+        stopMusicButton.setBorderPainted(false);
+        stopMusicButton.setContentAreaFilled(false);
+        stopMusicButton.setFocusPainted(false);
+        stopMusicButton.setOpaque(false);
+        musicPanel.add(stopMusicButton);
+        stopMusicButton.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.stopAudio();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
+
 
         mainTextPanel = new JPanel();
         mainTextPanel.setBounds(100,100,600,250);
@@ -78,6 +135,7 @@ public class UI {
         choiceButtonPanel.setLayout(new GridLayout(4,1));
         window.add(choiceButtonPanel);
 
+
         gameInfoButtonPanel = new JPanel();
         gameInfoButtonPanel.setBounds(250,350,300,150);
         gameInfoButtonPanel.setBackground(Color.black);
@@ -93,6 +151,13 @@ public class UI {
         choice1.addActionListener(cHandler);
         choice1.setActionCommand("c1");
         choiceButtonPanel.add(choice1);
+        choice1.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
 //        CHOICE 2
         choice2 = new JButton("choice2");
         choice2.setBackground(Color.black);
@@ -102,6 +167,13 @@ public class UI {
         choice2.addActionListener(cHandler);
         choice2.setActionCommand("c2");
         choiceButtonPanel.add(choice2);
+        choice2.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
         //CHOICE 3
         choice3 = new JButton("choice3");
         choice3.setBackground(Color.black);
@@ -111,6 +183,13 @@ public class UI {
         choice3.addActionListener(cHandler);
         choice3.setActionCommand("c3");
         choiceButtonPanel.add(choice3);
+        choice3.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
         //CHOICE 4
         choice4 = new JButton("choice4");
         choice4.setBackground(Color.black);
@@ -120,6 +199,13 @@ public class UI {
         choice4.addActionListener(cHandler);
         choice4.setActionCommand("c4");
         choiceButtonPanel.add(choice4);
+        choice4.addActionListener((ActionEvent e) -> {
+            try {
+                cHandler.buttonSound();
+            } catch (LineUnavailableException | IOException | UnsupportedAudioFileException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         gameInfo1 = new JButton("gameInfo1");
         gameInfo1.setBackground(Color.black);
