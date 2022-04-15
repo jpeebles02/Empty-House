@@ -7,7 +7,7 @@ public class UI {
     JFrame window;
     JPanel titleNamePanel, startPanel, mainTextPanel, choiceButtonPanel, directionButtonPanel, playerPanel, gameInfoButtonPanel;
     JLabel titleNameLabel, healthLabel, healthNumberLabel, inventoryLabel, inventoryNameLabel;
-    JButton startButton, gameInfoButton, choice1, choice2, choice3, choice4, north, south, east, west, gameInfo1, gameInfo2;
+    JButton startButton, gameInfoButton, choice1, choice2, choice3, choice4, north, south, east, west, gameInfo1, gameInfo2, gameInfo3, gameInfo4;
     JTextArea mainTextArea;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 26);
@@ -25,7 +25,7 @@ public class UI {
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(100, 100, 600, 250);
         titleNamePanel.setBackground(Color.black);
-        titleNameLabel = new JLabel("ADVENTURE");
+        titleNameLabel = new JLabel("Empty House");
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);
@@ -138,6 +138,26 @@ public class UI {
         gameInfo2.addActionListener(cHandler);
         gameInfo2.setActionCommand("g2");
         gameInfoButtonPanel.add(gameInfo2);
+
+        //Load
+        gameInfo3 = new JButton("gameInfo3");
+        gameInfo3.setBackground(Color.black);
+        gameInfo3.setForeground(Color.black);
+        gameInfo3.setFont(normalFont);
+        gameInfo3.setFocusPainted(false);
+        gameInfo3.addActionListener(cHandler);
+        gameInfo3.setActionCommand("g3");
+        gameInfoButtonPanel.add(gameInfo3);
+
+        //Save
+        gameInfo4 = new JButton("gameInfo4");
+        gameInfo4.setBackground(Color.black);
+        gameInfo4.setForeground(Color.black);
+        gameInfo4.setFont(normalFont);
+        gameInfo4.setFocusPainted(false);
+        gameInfo4.addActionListener(cHandler);
+        gameInfo4.setActionCommand("g4");
+        gameInfoButtonPanel.add(gameInfo4);
 
 
         directionButtonPanel = new JPanel();
