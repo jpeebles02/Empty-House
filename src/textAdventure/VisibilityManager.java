@@ -1,6 +1,6 @@
 package textAdventure;
 
-public class VisibilityManager {
+public class VisibilityManager{
 
     UI ui;
 
