@@ -3,7 +3,7 @@ package textAdventure;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Game {
+public class Game implements java.io.Serializable{
 
     ChoiceHandler cHandler = new ChoiceHandler();
     UI ui = new UI();
@@ -37,6 +37,8 @@ public class Game {
                 case "c2": story.selectPosition(nextPosition2);break;
                 case "g1": story.selectPosition(nextPosition1);break;
                 case "g2": story.selectPosition(nextPosition2);break;
+                case "g3": story.selectPosition(nextPosition3);break;
+                case "g4": story.selectPosition(nextPosition4);break;
                 case "c3": story.selectPosition(nextPosition3);break;
                 case "c4": story.selectPosition(nextPosition4);break;
                 case "n": story.selectDirection(nextDirection1);break;

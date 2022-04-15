@@ -1,8 +1,13 @@
 package textAdventure;
 
 import com.utility.*;
+import com.utility.SuperObject;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
-public class Story {
+import java.io.*;
+
+public class Story extends SuperObject{
 
     Game game;
     UI ui;
@@ -104,9 +109,16 @@ public class Story {
             case "bedroom":
                 bedroom();
                 break;
+            case "Load":
+                loadGame();
+                break;
+            case "Save":
+                saveGame();
+                break;
         }
 
     }
+
 
 
     public void selectDirection(String nextDirection){
@@ -166,6 +178,45 @@ public class Story {
         game.nextDirection2 = "";
         game.nextDirection3 = "";
         game.nextDirection4 = "";
+
+    }
+
+    public void saveGame() {
+
+        ui.mainTextArea.setText("Your progress has been saved. ");
+        ui.choice1.setText(">");
+        ui.choice2.setText("");
+
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("saveGame.txt"));
+
+            bw.write(player.health);
+            bw.newLine();
+            //bw.write(player.currentInventory));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadGame () {
+        ui.mainTextArea.setText("Load successful");
+        try{
+            BufferedReader br = new BufferedReader((new FileReader("saveGame.txt")));
+
+            player.health = Integer.parseInt(br.readLine());
+            //player.currentInventory = br.readLine();
+
+            br.close();
+        }
+        catch(Exception e) {
+
+        }
+
+        //ui.inventoryNameLabel.setText("Inventory");
+        ui.healthNumberLabel.setText("Health:");
+
+        intro();
+
 
     }
 
@@ -765,11 +816,15 @@ public class Story {
         ui.mainTextArea.setText("What would you like to do?");
         ui.gameInfo1.setText("Learn Back Story");
         ui.gameInfo2.setText(">");
+        ui.gameInfo3.setText("Load");
+        ui.gameInfo4.setText("Save");
 
 
         game.nextPosition1 = "learnStory";
         //need to be able to go back to start screen
         game.nextPosition2 = "toTitle";
+        game.nextPosition3 = "Load";
+        game.nextPosition4 = "Save";
 
     }
     public void learnStory(){
