@@ -32,9 +32,6 @@ public class UI {
 
         ImageIcon titleIcon = new ImageIcon("./resources/splashlogo.gif");
         titleNameLabel = new JLabel(titleIcon);
-
-        titleNameLabel = new JLabel("Empty House");
-
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
         titleNamePanel.add(titleNameLabel);

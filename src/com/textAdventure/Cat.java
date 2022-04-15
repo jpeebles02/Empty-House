@@ -1,4 +1,4 @@
-package textAdventure;
+package com.textAdventure;
 
 import com.utility.SuperObject;
 

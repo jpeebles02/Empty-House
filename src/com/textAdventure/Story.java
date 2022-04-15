@@ -9,7 +9,7 @@ import org.json.simple.parser.JSONParser;
 import javax.swing.*;
 import java.awt.*;
 
-public class Story {
+
 
 import java.io.*;
 
@@ -61,21 +61,6 @@ public class Story extends SuperObject{
                 break;
             case "lockedDoor":
                 lockedDoor();
-                break;
-            case "kitchen":
-                kitchen();
-                break;
-            case "bathroom":
-                bathroom();
-                break;
-            case "diningRoom":
-                diningRoom();
-                break;
-            case "bedroom":
-                bedroom();
-                break;
-            case "library":
-                library();
                 break;
             case "talkButler":
                 talkButler();
@@ -791,7 +776,7 @@ public class Story extends SuperObject{
 }
 
     public void ending(){
-        ui.mainTextArea.setText("""
+        ui.mainTextArea.setText("""     
                 You used the key to open the locked door. You have entered. SURPRISE! All of your friends are in the room! Its a surprise party for you!
                    ♫ ♫♫          ♫ ♫♫        ♫♫         ♫♫ ♫♫
                       ░░┌──┐░░░┌──┐░░░┌──┐░░

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
-public class Game implements java.io.Serializable{
+public class Game {
 
     ChoiceHandler cHandler = new ChoiceHandler();
     UI ui = new UI();
