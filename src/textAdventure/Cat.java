@@ -2,7 +2,7 @@ package textAdventure;
 
 import com.utility.SuperObject;
 
-public class Cat implements java.io.Serializable{
+public class Cat {
 
         public int health;
         public SuperObject currentInventory;

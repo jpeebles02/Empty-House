@@ -3,7 +3,7 @@ package textAdventure;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Game implements java.io.Serializable{
+public class Game {
 
     ChoiceHandler cHandler = new ChoiceHandler();
     UI ui = new UI();
