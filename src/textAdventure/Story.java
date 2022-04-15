@@ -1,13 +1,20 @@
-package textAdventure;
+package com.textAdventure;
 
 import com.utility.*;
 import com.utility.SuperObject;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Story {
+
 import java.io.*;
 
 public class Story extends SuperObject{
+
 
     Game game;
     UI ui;
@@ -54,6 +61,21 @@ public class Story extends SuperObject{
                 break;
             case "lockedDoor":
                 lockedDoor();
+                break;
+            case "kitchen":
+                kitchen();
+                break;
+            case "bathroom":
+                bathroom();
+                break;
+            case "diningRoom":
+                diningRoom();
+                break;
+            case "bedroom":
+                bedroom();
+                break;
+            case "library":
+                library();
                 break;
             case "talkButler":
                 talkButler();
@@ -115,6 +137,7 @@ public class Story extends SuperObject{
             case "Save":
                 saveGame();
                 break;
+
         }
 
     }
@@ -153,7 +176,7 @@ public class Story extends SuperObject{
 
 
         public void intro(){
-        ui.mainTextArea.setText("\n" + " It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
+        ui.mainTextArea.setText("\n" + "It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
                 " After some convincing, your friend gives you a knife and you decide to go in and explore.\n" +
                 " Your friend immediately darts through the entrance. \n" +
                 " As you approach the entrance, the door slams shut in front of you\n" +
@@ -570,7 +593,7 @@ public class Story extends SuperObject{
     public void library(){
         if (player.currentInventory.name == "Skeleton Key"){
             enemy = new EnemyGhost();
-            ui.mainTextArea.setText("You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs.\n Out of no where a " + enemy.name + " appears and steals your skeleton key. \nThe Ghost is blocking all exists, you can only escape to the bedroom in to the south ");
+            ui.mainTextArea.setText("You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs.\n Out of no where a " + enemy.name + " appears and steals your skeleton key. \nThe Ghost is blocking all exits, you can only escape to the bedroom in to the south ");
             player.currentInventory = new ObjectNothing();
             ui.inventoryNameLabel.setText(player.currentInventory.name);
             ui.choice1.setText("run away");
@@ -768,7 +791,14 @@ public class Story extends SuperObject{
 }
 
     public void ending(){
-        ui.mainTextArea.setText("You used the key to open the locked door\n You have entered. Surprise! All of your friends are in the room\nIts a surprise party for you!\n\n<THE END>");
+        ui.mainTextArea.setText("""
+                You used the key to open the locked door. You have entered. SURPRISE! All of your friends are in the room! Its a surprise party for you!
+                   ♫ ♫♫          ♫ ♫♫        ♫♫         ♫♫ ♫♫
+                      ░░┌──┐░░░┌──┐░░░┌──┐░░
+                      ░╔╡▐▐╞╝░╚╡▌▌╞╗░╔╡▐▐╞╝░
+                      ░░└╥╥┘░░░└╥╥┘░░░└╥╥┘░░
+                      ░░░╚╚░░░░░╝╝░░░░░╚╚░░░
+                """);
         ui.choice1.setVisible(false);
         ui.choice2.setVisible(false);
         ui.choice3.setVisible(false);

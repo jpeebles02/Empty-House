@@ -1,7 +1,10 @@
-package textAdventure;
+package com.textAdventure;
 
+import javax.sound.sampled.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 public class Game implements java.io.Serializable{
 
@@ -48,5 +51,36 @@ public class Game implements java.io.Serializable{
             }
 
         }
+        // Background music
+        Clip clip;
+
+        public void playAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+            File song = new File("./resources/horror.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(song);
+            clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.flush();
+        }
+
+        public void stopAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException{
+            clip.stop();
+            clip.flush();
+            clip.close();
+        }
+        // Sound effect for buttons when clicked
+        Clip clip2;
+
+        public void buttonSound() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
+            File sound = new File("./resources/pop.wav");
+            AudioInputStream audioStream2 = AudioSystem.getAudioInputStream(sound);
+            clip2 = AudioSystem.getClip();
+            clip2.open(audioStream2);
+            clip2.start();
+            clip2.flush();
+        }
+
+
     }
 }
