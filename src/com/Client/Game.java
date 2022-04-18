@@ -18,7 +18,7 @@ import org.json.simple.parser.ParseException;
 import javax.sound.sampled.*;
 
 
-public class Game implements java.io.Serializable {
+public class Game {
 
     public ArrayList<Room> map;
     public Actor player;
