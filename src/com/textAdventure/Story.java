@@ -218,7 +218,7 @@ public class Story {
         //ui.inventoryNameLabel.setText("Inventory");
         ui.healthNumberLabel.setText("Health:");
 
-        intro();
+        //intro();
 
 
     }
@@ -824,7 +824,7 @@ public class Story {
 
     public void gameInfo(){
         ui.mainTextArea.setText("What would you like to do?");
-        ui.gameInfo1.setText("Learn Back Story");
+        ui.gameInfo1.setText("Introduction");
         ui.gameInfo2.setText(">");
         ui.gameInfo3.setText("Load");
         ui.gameInfo4.setText("Save");
@@ -838,7 +838,7 @@ public class Story {
 
     }
     public void learnStory(){
-        ui.mainTextArea.setText("This is the story");
+        ui.mainTextArea.setText("Welcome to Empty House. In the coming hours, you will embark on a mysterious journey to escape the mysterious landscape that you have inexplicably walked into with your friend. The best tool you have with you is the power of exploration. In order to ultimately escape, you will have to explore your surroundings, encountering a variety of items along the way.");
         ui.gameInfo1.setText(">");
         ui.gameInfo2.setText("");
 

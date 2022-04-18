@@ -21,6 +21,6 @@ public class PlayerTest {
 
     @Test
     public void getCurrentInventory() {
-        //assertEquals("knife", player.getCurrentInventory());
+        assertEquals(null, player.getCurrentInventory());
     }
 }
