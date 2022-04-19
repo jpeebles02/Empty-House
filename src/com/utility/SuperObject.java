@@ -5,6 +5,7 @@ public class SuperObject {
     public int damage;
     public String description;
 
+
     public String getName() {
         return name;
     }
