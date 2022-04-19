@@ -13,7 +13,7 @@ import java.awt.*;
 
 import java.io.*;
 
-public class Story extends SuperObject{
+public class Story {
 
 
     Game game;
@@ -161,12 +161,7 @@ public class Story extends SuperObject{
 
 
         public void intro(){
-        ui.mainTextArea.setText("\n" + "It’s Halloween night, your friend invites you to an abandoned house to explore. \n"+
-                " After some convincing, your friend gives you a knife and you decide to go in and explore.\n" +
-                " Your friend immediately darts through the entrance. \n" +
-                " As you approach the entrance, the door slams shut in front of you\n" +
-                " As you enter through the door, you realize your friend has now disappeared\n" +
-                "what would you like to go? \n \n");
+        ui.mainTextArea.setText("It’s Halloween night, your friend invites you to an abandoned house to explore. After some convincing, your friend gives you a knife and you decide to go in and explore. Your friend immediately darts through the entrance. As you approach the entrance, the door slams shut in front of you. As you enter through the door, you realize your friend has now disappeared. What would you like to do? ");
 
         ui.choice1.setText("Go after friend");
         ui.choice2.setText("Return to start screen");
@@ -223,7 +218,7 @@ public class Story extends SuperObject{
         //ui.inventoryNameLabel.setText("Inventory");
         ui.healthNumberLabel.setText("Health:");
 
-        intro();
+        //intro();
 
 
     }
@@ -829,7 +824,7 @@ public class Story extends SuperObject{
 
     public void gameInfo(){
         ui.mainTextArea.setText("What would you like to do?");
-        ui.gameInfo1.setText("Learn Back Story");
+        ui.gameInfo1.setText("Introduction");
         ui.gameInfo2.setText(">");
         ui.gameInfo3.setText("Load");
         ui.gameInfo4.setText("Save");
@@ -843,7 +838,7 @@ public class Story extends SuperObject{
 
     }
     public void learnStory(){
-        ui.mainTextArea.setText("This is the story");
+        ui.mainTextArea.setText("Welcome to Empty House. In the coming hours, you will embark on a mysterious journey to escape the mysterious landscape that you have inexplicably walked into with your friend. The best tool you have with you is the power of exploration. In order to ultimately escape, you will have to explore your surroundings, encountering a variety of items along the way.");
         ui.gameInfo1.setText(">");
         ui.gameInfo2.setText("");
 
@@ -853,4 +848,72 @@ public class Story extends SuperObject{
 
     }
 
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public UI getUi() {
+        return ui;
+    }
+
+    public void setUi(UI ui) {
+        this.ui = ui;
+    }
+
+    public VisibilityManager getVm() {
+        return vm;
+    }
+
+    public void setVm(VisibilityManager vm) {
+        this.vm = vm;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Cat getCat() {
+        return cat;
+    }
+
+    public void setCat(Cat cat) {
+        this.cat = cat;
+    }
+
+    public SuperEnemy getEnemy() {
+        return enemy;
+    }
+
+    public void setEnemy(SuperEnemy enemy) {
+        this.enemy = enemy;
+    }
+
+    public boolean isBeatEnemy() {
+        return beatEnemy;
+    }
+
+    public void setBeatEnemy(boolean beatEnemy) {
+        this.beatEnemy = beatEnemy;
+    }
+
+    @Override
+    public String toString() {
+        return "Story{" +
+                "game=" + game +
+                ", ui=" + ui +
+                ", vm=" + vm +
+                ", player=" + player +
+                ", cat=" + cat +
+                ", enemy=" + enemy +
+                ", beatEnemy=" + beatEnemy +
+                '}';
+    }
 }
