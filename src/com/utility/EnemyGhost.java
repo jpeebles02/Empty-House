@@ -6,5 +6,6 @@ public class EnemyGhost extends SuperEnemy{
         name = "Ghost";
         health = 10;
         power = 3;
+        attackMessage = "Ghost hit you with ghost power";
     }
 }

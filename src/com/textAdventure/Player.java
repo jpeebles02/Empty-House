@@ -6,7 +6,7 @@ public class Player {
 
     public int health;
     public SuperObject currentInventory;
-
+    public String attackMessage;
     public String Name;
     //user input?
 
