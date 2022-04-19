@@ -131,7 +131,7 @@ public class UI {
         mainTextPanel.add(mainTextArea);
 
         choiceButtonPanel = new JPanel();
-        choiceButtonPanel.setBounds(100,350,300,150);
+        choiceButtonPanel.setBounds(100,350,275,150);
         choiceButtonPanel.setBackground(Color.black);
         choiceButtonPanel.setLayout(new GridLayout(4,1));
         window.add(choiceButtonPanel);
@@ -248,7 +248,7 @@ public class UI {
 
 
         directionButtonPanel = new JPanel();
-        directionButtonPanel.setBounds(300,350,300,150);
+        directionButtonPanel.setBounds(425,350,275,150);
         directionButtonPanel.setBackground(Color.black);
         directionButtonPanel.setLayout(new GridLayout(4,1));
         window.add(directionButtonPanel);
