@@ -2,18 +2,7 @@ package com.textAdventure;
 
 import com.utility.*;
 import com.utility.SuperObject;
-import com.textAdventure.Game;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
-
-import javax.swing.*;
-import java.awt.*;
-
-
-
 import java.io.*;
-import java.util.TimerTask;
 
 public class Story extends SuperObject{
 
@@ -217,7 +206,6 @@ public class Story extends SuperObject{
 
         intro();
 
-
     }
 
     public void lockedDoor(){
@@ -237,7 +225,6 @@ public class Story extends SuperObject{
             game.nextPosition3 = "exploreHouse";
             game.nextPosition4 = "intro";
 
-
             ui.north.setVisible(false);
             ui.south.setVisible(false);
             ui.east.setVisible(false);
@@ -245,9 +232,6 @@ public class Story extends SuperObject{
         } else {
             lose();
         }
-
-
-
     }
 
     public void leave(){
@@ -288,7 +272,6 @@ public class Story extends SuperObject{
             ui.south.setVisible(false);
             ui.east.setVisible(false);
             ui.west.setVisible(false);
-
         }
     }
     public void exploreHouse(){
