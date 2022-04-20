@@ -2,18 +2,7 @@ package com.textAdventure;
 
 import com.utility.*;
 import com.utility.SuperObject;
-import com.textAdventure.Game;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
-
-import javax.swing.*;
-import java.awt.*;
-
-
-
 import java.io.*;
-import java.util.TimerTask;
 
 public class Story extends SuperObject{
 
@@ -176,16 +165,13 @@ public class Story extends SuperObject{
         game.nextPosition2 = "toTitle";
         game.nextPosition3 = "leave";
 
-
         ui.north.setVisible(false);
         ui.south.setVisible(false);
         ui.east.setVisible(false);
         ui.west.setVisible(false);
-
     }
 
     public void saveGame() {
-
         ui.mainTextArea.setText("Your progress has been saved. ");
         ui.choice1.setText(">");
         ui.choice2.setText("");
@@ -220,7 +206,6 @@ public class Story extends SuperObject{
 
         intro();
 
-
     }
 
     public void lockedDoor(){
@@ -240,7 +225,6 @@ public class Story extends SuperObject{
             game.nextPosition3 = "exploreHouse";
             game.nextPosition4 = "intro";
 
-
             ui.north.setVisible(false);
             ui.south.setVisible(false);
             ui.east.setVisible(false);
@@ -248,9 +232,6 @@ public class Story extends SuperObject{
         } else {
             lose();
         }
-
-
-
     }
 
     public void leave(){
@@ -291,7 +272,6 @@ public class Story extends SuperObject{
             ui.south.setVisible(false);
             ui.east.setVisible(false);
             ui.west.setVisible(false);
-
         }
     }
     public void exploreHouse(){
@@ -367,8 +347,8 @@ public class Story extends SuperObject{
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
             ui.choice4.setVisible(true);
-            ui.choice4.setText("leave");
-            game.nextPosition4 = "QUIT";
+            ui.choice4.setText("QUIT");
+            game.nextPosition4 = "leave";
 
             ui.north.setVisible(true);
             ui.south.setVisible(true);
@@ -402,9 +382,7 @@ public class Story extends SuperObject{
     }
 
     public void diningRoom(){
-        ui.mainTextArea.setText("You enter the dining room and right away you notice a butler standing in the corner with a tray \n"
-                + "The main room is to the north\n"
-                + "The Kitchen is to the west\n");
+        ui.mainTextArea.setText("You enter the dining room and right away you notice a butler standing in the corner with a tray");
         ui.choice1.setVisible(true);
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(false);
@@ -414,14 +392,14 @@ public class Story extends SuperObject{
         game.nextPosition1 = "talkButler";
         game.nextPosition2 = "exploreHouse";
 
-        ui.south.setVisible(false);
-        ui.east.setVisible(false);
         ui.north.setVisible(true);
+        ui.south.setVisible(true);
+        ui.east.setVisible(false);
         ui.west.setVisible(true);
         ui.north.setText("Go North");
-        ui.west.setText("Go West");
+        ui.south.setText("Go West");
         game.nextDirection1 = "exploreHouse";
-        game.nextDirection4 = "kitchen";
+        game.nextDirection2 = "kitchen";
     }
 
     public void kitchen(){

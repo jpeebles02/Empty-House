@@ -30,7 +30,7 @@ public class UI {
         titleNamePanel.setBounds(140, 100, 615, 200);
         titleNamePanel.setBackground(Color.black);
 
-        ImageIcon titleIcon = new ImageIcon("./resources/splashlogo.gif");
+        ImageIcon titleIcon = new ImageIcon("splashlogo.gif");
         titleNameLabel = new JLabel(titleIcon);
         titleNameLabel.setForeground(Color.white);
         titleNameLabel.setFont(titleFont);
@@ -84,7 +84,7 @@ public class UI {
         window.add(musicPanel);
 
         // Buttons to start/stop background music
-        ImageIcon playIcon = new ImageIcon("./resources/play.png");
+        ImageIcon playIcon = new ImageIcon("play.png");
         JButton playMusicButton = new JButton(playIcon);
         playMusicButton.setBorderPainted(false);
         playMusicButton.setContentAreaFilled(false);
@@ -99,7 +99,7 @@ public class UI {
             }
         });
 
-        ImageIcon stopIcon = new ImageIcon("./resources/stop.png");
+        ImageIcon stopIcon = new ImageIcon("stop.png");
         JButton stopMusicButton = new JButton(stopIcon);
         stopMusicButton.setBorderPainted(false);
         stopMusicButton.setContentAreaFilled(false);
