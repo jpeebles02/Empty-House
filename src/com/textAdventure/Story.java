@@ -387,15 +387,15 @@ public class Story extends SuperObject{
         ui.choice2.setVisible(true);
         ui.choice3.setVisible(false);
         ui.choice4.setVisible(false);
-        ui.choice1.setText("talk to butler");
-        ui.choice2.setText("return to main room ");
+        ui.choice1.setText("Talk to butler");
+        ui.choice2.setText("Return to main room ");
         game.nextPosition1 = "talkButler";
         game.nextPosition2 = "exploreHouse";
 
         ui.north.setVisible(true);
         ui.south.setVisible(true);
         ui.east.setVisible(false);
-        ui.west.setVisible(true);
+        ui.west.setVisible(false);
         ui.north.setText("Go North");
         ui.south.setText("Go West");
         game.nextDirection1 = "exploreHouse";
@@ -418,26 +418,24 @@ public class Story extends SuperObject{
             ui.north.setText("Return to main room");
             game.nextDirection1 = "exploreHouse";
         } else {
-            ui.mainTextArea.setText("You enter the dirty kitchen and are approached by a cat with what appears to be a key around its collar, you reach for it thinking it could be a key to the secret door.  The cat runs out of arms distance.You look around the kitchen for anything to lure the cat back out. You notice a gallon of water on the kitchen counter.\n"
-                    + "The Bathroom is to the north\n"
-                    + "The Dining Room is to the east\n");
+            ui.mainTextArea.setText("You enter the dirty kitchen and are approached by a cat with what appears to be a key around its collar, you reach for it thinking it could be a key to the secret door.  The cat runs out of arms distance.You look around the kitchen for anything to lure the cat back out. You notice a gallon of water on the kitchen counter.\n");
             ui.choice1.setVisible(true);
             ui.choice2.setVisible(true);
             ui.choice3.setVisible(true);
             ui.choice4.setVisible(false);
-            ui.choice1.setText("lure cat");
-            ui.choice2.setText("drink some water");
-            ui.choice3.setText("return to main room");
+            ui.choice1.setText("Lure cat");
+            ui.choice2.setText("Drink some water");
+            ui.choice3.setText("Return to main room");
             game.nextPosition1 = "lureCat";
             game.nextPosition2 = "drinkWater";
             game.nextPosition3 = "exploreHouse";
 
             ui.north.setVisible(true);
-            ui.south.setVisible(false);
-            ui.east.setVisible(true);
+            ui.south.setVisible(true);
+            ui.east.setVisible(false);
             ui.west.setVisible(false);
             ui.north.setText("Go North");
-            ui.east.setText("Go East");
+            ui.south.setText("Go East");
             game.nextDirection1 = "bathroom";
             game.nextDirection3 = "diningRoom";
         }
@@ -499,18 +497,18 @@ public class Story extends SuperObject{
         if (player.currentInventory.name =="Skeleton Key"){
             ui.mainTextArea.setText("There is nothing in the bathroom! You should go back to the main room");
             ui.choice1.setVisible(true);
-            ui.choice1.setText("return to the main room");
+            ui.choice1.setText("Return to the main room");
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
             ui.choice4.setVisible(false);
             game.nextPosition1 = "exploreHouse";
 
-            ui.north.setVisible(false);
+            ui.north.setVisible(true);
             ui.south.setVisible(true);
-            ui.east.setVisible(true);
+            ui.east.setVisible(false);
             ui.west.setVisible(false);
-            ui.south.setText("Go South");
-            ui.east.setText("Go East");
+            ui.north.setText("Go South");
+            ui.south.setText("Go East");
             game.nextDirection2 = "kitchen";
             game.nextDirection3 = "exploreHouse";
 
@@ -536,16 +534,16 @@ public class Story extends SuperObject{
             ui.choice3.setVisible(false);
             ui.choice4.setVisible(false);
             ui.choice1.setText("Pick up Skeleton Key");
-            ui.choice2.setText("return to the main room");
+            ui.choice2.setText("Return to the main room");
             game.nextPosition1 = "pickUpKey";
             game.nextPosition2 = "exploreHouse";
 
-            ui.north.setVisible(false);
+            ui.north.setVisible(true);
             ui.south.setVisible(true);
-            ui.east.setVisible(true);
+            ui.east.setVisible(false);
             ui.west.setVisible(false);
-            ui.south.setText("go South");
-            ui.east.setText("Go East");
+            ui.north.setText("Go South");
+            ui.south.setText("Go East");
             game.nextDirection2 = "kitchen";
             game.nextDirection3 = "exploreHouse";
         }
@@ -580,7 +578,7 @@ public class Story extends SuperObject{
         game.nextPosition1 = "library";
 
         ui.north.setVisible(true);
-        ui.north.setText("Go north");
+        ui.north.setText("Go North");
         ui.south.setVisible(false);
         ui.east.setVisible(false);
         ui.west.setVisible(false);
@@ -597,14 +595,15 @@ public class Story extends SuperObject{
             ui.choice2.setVisible(false);
             ui.choice3.setVisible(false);
             ui.choice4.setVisible(false);
-            ui.choice1.setText("run away");
+            ui.choice1.setText("Run Away!");
             game.nextPosition1 = "bedroom";
 
-            ui.north.setVisible(false);
-            ui.south.setText("Go south");
+            ui.north.setVisible(true);
+            ui.south.setVisible(false);
             ui.east.setVisible(false);
             ui.west.setVisible(false);
-            game.nextDirection2 = "bedroom";
+            ui.north.setText("Go South");
+            game.nextDirection1 = "bedroom";
 
         } else if (player.currentInventory.name == "Flash Light"){
             ui.mainTextArea.setText("You can use the Flash Light that the maid gave you to fight the ghost. ");
@@ -615,12 +614,12 @@ public class Story extends SuperObject{
             ui.choice4.setVisible(false);
             game.nextPosition1 = "fight";
 
-            ui.north.setVisible(false);
+            ui.north.setVisible(true);
             ui.south.setVisible(false);
             ui.east.setVisible(false);
-            ui.west.setVisible(true);
-            ui.west.setText("I'm scared ... QUIT");
-            game.nextDirection4 = "toTitle";
+            ui.west.setVisible(false);
+            ui.north.setText("I'm scared ... QUIT");
+            game.nextDirection1 = "toTitle";
         } else {
             ui.mainTextArea.setText("You enter the library and notice a wall of bookshelves, they all appear to be dusty and covered in cobwebs. Nothing here ");
             ui.choice1.setVisible(true);
@@ -789,8 +788,6 @@ public class Story extends SuperObject{
 
     }
 
-
-
     public void gameInfo(){
         ui.mainTextArea.setText("What would you like to do?");
         ui.gameInfo1.setText("Learn Back Story");
@@ -807,7 +804,7 @@ public class Story extends SuperObject{
 
     }
     public void learnStory(){
-        ui.mainTextArea.setText("This is the story");
+        ui.mainTextArea.setText("Welcome to Adventure. In the coming hours, you will embark on a mysterious journey to escape the mysterious landscape that you have inexplicably walked into with your friend. The best tool you have with you is the power of exploration. In order to ultimately escape, you will have to explore your surroundings, encountering a variety of items along the way.");
         ui.gameInfo1.setText(">");
         ui.gameInfo2.setText("");
 
