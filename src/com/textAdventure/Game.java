@@ -55,7 +55,7 @@ public class Game {
         Clip clip;
 
         public void playAudio() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-            File song = new File("./resources/horror.wav");
+            File song = new File("horror.wav");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(song);
             clip = AudioSystem.getClip();
             clip.open(audioStream);
@@ -73,7 +73,7 @@ public class Game {
         Clip clip2;
 
         public void buttonSound() throws LineUnavailableException, IOException, UnsupportedAudioFileException {
-            File sound = new File("./resources/pop.wav");
+            File sound = new File("pop.wav");
             AudioInputStream audioStream2 = AudioSystem.getAudioInputStream(sound);
             clip2 = AudioSystem.getClip();
             clip2.open(audioStream2);
